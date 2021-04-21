@@ -1,0 +1,17 @@
+C:\Users\home\source\repos\Bankify\Bankify\bin\Debug\Bankify.exe.config
+C:\Users\home\source\repos\Bankify\Bankify\bin\Debug\Bankify.exe
+C:\Users\home\source\repos\Bankify\Bankify\bin\Debug\Bankify.pdb
+C:\Users\home\source\repos\Bankify\Bankify\bin\Debug\EntityFramework.dll
+C:\Users\home\source\repos\Bankify\Bankify\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\home\source\repos\Bankify\Bankify\bin\Debug\EntityFramework.xml
+C:\Users\home\source\repos\Bankify\Bankify\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.csprojAssemblyReference.cache
+C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.Properties.Resources.resources
+C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.csproj.GenerateResource.cache
+C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.csproj.CoreCompileInputs.cache
+C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.csproj.CopyComplete
+C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.exe
+C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.pdb
+C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.Form_login.resources
+C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.Form_Admin.resources
+C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.Form_Client.resources

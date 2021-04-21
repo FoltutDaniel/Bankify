@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Bank_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BankAccount">
+    <Key>
+      <PropertyRef Name="account_id" />
+    </Key>
+    <Property Name="account_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="iban" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="currency" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="amount" Type="float" Nullable="false" />
+    <Property Name="client_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClientAccount">
+    <Key>
+      <PropertyRef Name="client_id" />
+    </Key>
+    <Property Name="client_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="last_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="country" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="phone_number" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="birthday" Type="datetime" Nullable="false" />
+    <Property Name="login_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoginAccount">
+    <Key>
+      <PropertyRef Name="login_id" />
+    </Key>
+    <Property Name="login_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="login_username" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="login_password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="account_type" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tranzaction">
+    <Key>
+      <PropertyRef Name="transaction_id" />
+    </Key>
+    <Property Name="transaction_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="from_iban" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="to_iban" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="amount" Type="float" Nullable="false" />
+    <Property Name="currency" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="transaction_date" Type="datetime" Nullable="false" />
+    <Property Name="bank_account_from_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__BankAccou__clien__4E88ABD4">
+    <End Role="ClientAccount" Type="Self.ClientAccount" Multiplicity="1" />
+    <End Role="BankAccount" Type="Self.BankAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientAccount">
+        <PropertyRef Name="client_id" />
+      </Principal>
+      <Dependent Role="BankAccount">
+        <PropertyRef Name="client_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClientAcc__login__4BAC3F29">
+    <End Role="LoginAccount" Type="Self.LoginAccount" Multiplicity="1" />
+    <End Role="ClientAccount" Type="Self.ClientAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoginAccount">
+        <PropertyRef Name="login_id" />
+      </Principal>
+      <Dependent Role="ClientAccount">
+        <PropertyRef Name="login_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tranzacti__bank___5165187F">
+    <End Role="BankAccount" Type="Self.BankAccount" Multiplicity="1" />
+    <End Role="Tranzaction" Type="Self.Tranzaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BankAccount">
+        <PropertyRef Name="account_id" />
+      </Principal>
+      <Dependent Role="Tranzaction">
+        <PropertyRef Name="bank_account_from_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Bank_dbModelStoreContainer">
+    <EntitySet Name="BankAccount" EntityType="Self.BankAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientAccount" EntityType="Self.ClientAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginAccount" EntityType="Self.LoginAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tranzaction" EntityType="Self.Tranzaction" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BankAccou__clien__4E88ABD4" Association="Self.FK__BankAccou__clien__4E88ABD4">
+      <End Role="ClientAccount" EntitySet="ClientAccount" />
+      <End Role="BankAccount" EntitySet="BankAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClientAcc__login__4BAC3F29" Association="Self.FK__ClientAcc__login__4BAC3F29">
+      <End Role="LoginAccount" EntitySet="LoginAccount" />
+      <End Role="ClientAccount" EntitySet="ClientAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tranzacti__bank___5165187F" Association="Self.FK__Tranzacti__bank___5165187F">
+      <End Role="BankAccount" EntitySet="BankAccount" />
+      <End Role="Tranzaction" EntitySet="Tranzaction" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

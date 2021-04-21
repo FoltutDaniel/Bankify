@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Bank_dbModelStoreContainer" CdmEntityContainer="Bank_dbEntities">
+    <EntitySetMapping Name="BankAccount">
+      <EntityTypeMapping TypeName="Bank_dbModel.BankAccount">
+        <MappingFragment StoreEntitySet="BankAccount">
+          <ScalarProperty Name="account_id" ColumnName="account_id" />
+          <ScalarProperty Name="iban" ColumnName="iban" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientAccount">
+      <EntityTypeMapping TypeName="Bank_dbModel.ClientAccount">
+        <MappingFragment StoreEntitySet="ClientAccount">
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginAccount">
+      <EntityTypeMapping TypeName="Bank_dbModel.LoginAccount">
+        <MappingFragment StoreEntitySet="LoginAccount">
+          <ScalarProperty Name="login_id" ColumnName="login_id" />
+          <ScalarProperty Name="login_username" ColumnName="login_username" />
+          <ScalarProperty Name="login_password" ColumnName="login_password" />
+          <ScalarProperty Name="account_type" ColumnName="account_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tranzaction">
+      <EntityTypeMapping TypeName="Bank_dbModel.Tranzaction">
+        <MappingFragment StoreEntitySet="Tranzaction">
+          <ScalarProperty Name="transaction_id" ColumnName="transaction_id" />
+          <ScalarProperty Name="from_iban" ColumnName="from_iban" />
+          <ScalarProperty Name="to_iban" ColumnName="to_iban" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="transaction_date" ColumnName="transaction_date" />
+          <ScalarProperty Name="bank_account_from_id" ColumnName="bank_account_from_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
