@@ -15,3 +15,20 @@ C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.pdb
 C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.Form_login.resources
 C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.Form_Admin.resources
 C:\Users\home\source\repos\Bankify\Bankify\obj\Debug\Bankify.Form_Client.resources
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\bin\Debug\Bankify.exe.config
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\bin\Debug\Bankify.exe
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\bin\Debug\Bankify.pdb
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\bin\Debug\EntityFramework.dll
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\bin\Debug\EntityFramework.xml
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.csprojAssemblyReference.cache
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.Form_Admin.resources
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.Form_Client.resources
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.Form_login.resources
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.Properties.Resources.resources
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.csproj.GenerateResource.cache
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.csproj.CoreCompileInputs.cache
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.csproj.CopyComplete
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.exe
+D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.pdb
