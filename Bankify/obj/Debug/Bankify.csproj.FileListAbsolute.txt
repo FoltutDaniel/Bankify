@@ -32,3 +32,37 @@ D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.csproj.Cor
 D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.csproj.CopyComplete
 D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.exe
 D:\Work\An3\SEM2\II\Proiect practic\Proiect\Bankify\obj\Debug\Bankify.pdb
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\bin\Debug\Bankify.exe.config
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\bin\Debug\Bankify.exe
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\bin\Debug\Bankify.pdb
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\bin\Debug\EntityFramework.dll
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\bin\Debug\EntityFramework.xml
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\obj\Debug\Bankify.csprojAssemblyReference.cache
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\obj\Debug\Bankify.Form_Admin.resources
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\obj\Debug\Bankify.Form_Client.resources
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\obj\Debug\Bankify.Form_login.resources
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\obj\Debug\Bankify.Properties.Resources.resources
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\obj\Debug\Bankify.csproj.GenerateResource.cache
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\obj\Debug\Bankify.csproj.CoreCompileInputs.cache
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\obj\Debug\Bankify.csproj.CopyComplete
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\obj\Debug\Bankify.exe
+C:\Users\cretu\iCloudDrive\Desktop\II-Project\Bankify\Bankify\obj\Debug\Bankify.pdb
+D:\Downloads\Bankify\Bankify\bin\Debug\Bankify.exe.config
+D:\Downloads\Bankify\Bankify\bin\Debug\Bankify.exe
+D:\Downloads\Bankify\Bankify\bin\Debug\Bankify.pdb
+D:\Downloads\Bankify\Bankify\bin\Debug\EntityFramework.dll
+D:\Downloads\Bankify\Bankify\bin\Debug\EntityFramework.SqlServer.dll
+D:\Downloads\Bankify\Bankify\bin\Debug\EntityFramework.xml
+D:\Downloads\Bankify\Bankify\bin\Debug\EntityFramework.SqlServer.xml
+D:\Downloads\Bankify\Bankify\obj\Debug\Bankify.csprojAssemblyReference.cache
+D:\Downloads\Bankify\Bankify\obj\Debug\Bankify.Form_Admin.resources
+D:\Downloads\Bankify\Bankify\obj\Debug\Bankify.Form_Client.resources
+D:\Downloads\Bankify\Bankify\obj\Debug\Bankify.Form_login.resources
+D:\Downloads\Bankify\Bankify\obj\Debug\Bankify.Properties.Resources.resources
+D:\Downloads\Bankify\Bankify\obj\Debug\Bankify.csproj.GenerateResource.cache
+D:\Downloads\Bankify\Bankify\obj\Debug\Bankify.csproj.CoreCompileInputs.cache
+D:\Downloads\Bankify\Bankify\obj\Debug\Bankify.csproj.CopyComplete
+D:\Downloads\Bankify\Bankify\obj\Debug\Bankify.exe
+D:\Downloads\Bankify\Bankify\obj\Debug\Bankify.pdb

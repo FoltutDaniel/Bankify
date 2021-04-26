@@ -73,6 +73,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Bankify_model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Bank_dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bank_dbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClientAccount.cs">
       <DependentUpon>Bankify_model.tt</DependentUpon>
     </Compile>
@@ -126,6 +131,17 @@
     </EntityDeploy>
     <None Include="Bankify_model.edmx.diagram">
       <DependentUpon>Bankify_model.edmx</DependentUpon>
+    </None>
+    <None Include="Bank_dbDataSet.xsc">
+      <DependentUpon>Bank_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bank_dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bank_dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bank_dbDataSet.xss">
+      <DependentUpon>Bank_dbDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

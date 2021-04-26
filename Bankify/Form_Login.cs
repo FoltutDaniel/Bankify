@@ -16,6 +16,7 @@ namespace Bankify
         public Form_login()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void button_login_Click(object sender, EventArgs e)
@@ -77,7 +78,14 @@ namespace Bankify
                         MessageBox.Show("Username-ul nu exista");
                     }
                 }
+                textBox_password.Clear();
+                textBox_username.Clear();
             }
+        }
+
+        private void Form_login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
