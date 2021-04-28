@@ -68,6 +68,11 @@
             // 
             // dataGridView_accounts
             // 
+            this.dataGridView_accounts.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dataGridView_accounts.AllowUserToAddRows = false;
+            this.dataGridView_accounts.AllowUserToDeleteRows = false;
+            this.dataGridView_accounts.AllowUserToResizeColumns = false;
+            this.dataGridView_accounts.AllowUserToResizeRows = false;
             this.dataGridView_accounts.AutoGenerateColumns = false;
             this.dataGridView_accounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_accounts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -83,8 +88,10 @@
             this.dataGridView_accounts.DataSource = this.clientAccountBindingSource;
             this.dataGridView_accounts.Location = new System.Drawing.Point(372, 12);
             this.dataGridView_accounts.Name = "dataGridView_accounts";
+            this.dataGridView_accounts.ReadOnly = true;
             this.dataGridView_accounts.Size = new System.Drawing.Size(944, 415);
             this.dataGridView_accounts.TabIndex = 0;
+            this.dataGridView_accounts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_accounts_CellClick);
             // 
             // clientidDataGridViewTextBoxColumn
             // 
@@ -301,6 +308,7 @@
             this.button_update_account.TabIndex = 19;
             this.button_update_account.Text = "Update";
             this.button_update_account.UseVisualStyleBackColor = true;
+            this.button_update_account.Click += new System.EventHandler(this.button_update_account_Click);
             // 
             // button_delete_account
             // 

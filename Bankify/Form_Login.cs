@@ -43,7 +43,7 @@ namespace Bankify
 
                     if (account_type == "client")
                     {
-                        Form_Client form_Client = new Form_Client();
+                        Form_Client form_Client = new Form_Client(login_id);
                         form_Client.Show();
                     }
                     else

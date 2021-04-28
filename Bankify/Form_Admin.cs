@@ -121,5 +121,22 @@ namespace Bankify
                 }
            }
         }
+
+        private void button_update_account_Click(object sender, EventArgs e)
+        {
+            int client_id = int.Parse(dataGridView_accounts.CurrentCell.Value.ToString());
+        }
+
+        private void dataGridView_accounts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox_first_name.Text = dataGridView_accounts.Rows[e.RowIndex].Cells[1].Value.ToString();
+            textBox_last_name.Text = dataGridView_accounts.Rows[e.RowIndex].Cells[2].Value.ToString();
+            textBox_age.Text = dataGridView_accounts.Rows[e.RowIndex].Cells[3].Value.ToString();
+            textBox_country.Text = dataGridView_accounts.Rows[e.RowIndex].Cells[4].Value.ToString();
+            textBox_phone_number.Text = dataGridView_accounts.Rows[e.RowIndex].Cells[5].Value.ToString();
+            textBox_email.Text = dataGridView_accounts.Rows[e.RowIndex].Cells[6].Value.ToString();
+            textBox_log_in_id.Text = dataGridView_accounts.Rows[e.RowIndex].Cells[8].Value.ToString();
+
+        }
     }
 }
