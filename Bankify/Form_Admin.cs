@@ -100,7 +100,8 @@ namespace Bankify
 
         private void button_delete_account_Click(object sender, EventArgs e)
         {
-            int client_id= int.Parse(dataGridView_accounts.SelectedRows[0].Cells[0].Value.ToString());
+            int client_id = int.Parse(dataGridView_accounts.CurrentCell.Value.ToString());
+            MessageBox.Show(client_id + " ");
             using (var db = new Bank_dbEntities()) 
             {
                 
@@ -111,7 +112,7 @@ namespace Bankify
                                   select c).First();
                     db.ClientAccount.Remove(client);
                     db.SaveChanges();
-                    dataGridView_accounts.Rows.RemoveAt(this.dataGridView_accounts.SelectedRows[0].Index);
+                    dataGridView_accounts.Rows.RemoveAt(this.dataGridView_accounts.CurrentCell.RowIndex);
                     MessageBox.Show("Stergere reusita!");
                 }
                 catch
