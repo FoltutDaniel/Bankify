@@ -100,3 +100,4 @@ D:\Downloads\Bankify(1)\Bankify\Bankify\obj\Debug\Bankify.csproj.CoreCompileInpu
 D:\Downloads\Bankify(1)\Bankify\Bankify\obj\Debug\Bankify.csproj.CopyComplete
 D:\Downloads\Bankify(1)\Bankify\Bankify\obj\Debug\Bankify.exe
 D:\Downloads\Bankify(1)\Bankify\Bankify\obj\Debug\Bankify.pdb
+C:\Users\home\ProiectII\Bankify\Bankify\obj\Debug\Bankify.Form_Transfer.resources

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Bank_dbDataSet1" targetNamespace="http://tempuri.org/Bank_dbDataSet1.xsd" xmlns:mstns="http://tempuri.org/Bank_dbDataSet1.xsd" xmlns="http://tempuri.org/Bank_dbDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Bank_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Bank_dbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Bankify.Properties.Settings.GlobalReference.Default.Bank_dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BankAccountTableAdapter" GeneratorDataComponentClassName="BankAccountTableAdapter" Name="BankAccount" UserDataComponentName="BankAccountTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Bank_dbConnectionString (Settings)" DbObjectName="Bank_db.dbo.BankAccount" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT iban, currency, amount FROM dbo.BankAccount</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="iban" DataSetColumn="iban" />
+              <Mapping SourceColumn="currency" DataSetColumn="currency" />
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Bank_dbDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Bank_dbDataSet1" msprop:Generator_UserDSName="Bank_dbDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BankAccount" msprop:Generator_TableClassName="BankAccountDataTable" msprop:Generator_TableVarName="tableBankAccount" msprop:Generator_TablePropName="BankAccount" msprop:Generator_RowDeletingName="BankAccountRowDeleting" msprop:Generator_RowChangingName="BankAccountRowChanging" msprop:Generator_RowEvHandlerName="BankAccountRowChangeEventHandler" msprop:Generator_RowDeletedName="BankAccountRowDeleted" msprop:Generator_UserTableName="BankAccount" msprop:Generator_RowChangedName="BankAccountRowChanged" msprop:Generator_RowEvArgName="BankAccountRowChangeEvent" msprop:Generator_RowClassName="BankAccountRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="iban" msprop:Generator_ColumnVarNameInTable="columniban" msprop:Generator_ColumnPropNameInRow="iban" msprop:Generator_ColumnPropNameInTable="ibanColumn" msprop:Generator_UserColumnName="iban">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="currency" msprop:Generator_ColumnVarNameInTable="columncurrency" msprop:Generator_ColumnPropNameInRow="currency" msprop:Generator_ColumnPropNameInTable="currencyColumn" msprop:Generator_UserColumnName="currency">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

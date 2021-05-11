@@ -78,6 +78,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Bank_dbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Bank_dbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bank_dbDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClientAccount.cs">
       <DependentUpon>Bankify_model.tt</DependentUpon>
     </Compile>
@@ -99,6 +104,12 @@
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Transfer.Designer.cs">
+      <DependentUpon>Form_Transfer.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginAccount.cs">
       <DependentUpon>Bankify_model.tt</DependentUpon>
     </Compile>
@@ -115,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Transfer.resx">
+      <DependentUpon>Form_Transfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -142,6 +156,17 @@
     </None>
     <None Include="Bank_dbDataSet.xss">
       <DependentUpon>Bank_dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Bank_dbDataSet1.xsc">
+      <DependentUpon>Bank_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Bank_dbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bank_dbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bank_dbDataSet1.xss">
+      <DependentUpon>Bank_dbDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
