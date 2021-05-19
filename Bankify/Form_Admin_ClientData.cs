@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Bankify
 {
-    public partial class Form_Admin : Form
+    public partial class Form_Admin_ClientData : Form
     {
        
-        public Form_Admin()
+        public Form_Admin_ClientData()
         {
             InitializeComponent();
             CenterToScreen();

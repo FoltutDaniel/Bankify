@@ -50,8 +50,8 @@ namespace Bankify
                     {
                         if (account_type == "admin")
                         {
-                            Form_Admin form_Admin = new Form_Admin();
-                            form_Admin.Show();
+                            Form_Admin_Menu form_admin_menu = new Form_Admin_Menu();
+                            form_admin_menu.Show();
                         }
                     }
                 }

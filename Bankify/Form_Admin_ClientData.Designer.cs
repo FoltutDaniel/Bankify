@@ -1,6 +1,6 @@
 ﻿namespace Bankify
 {
-    partial class Form_Admin
+    partial class Form_Admin_ClientData
     {
         /// <summary>
         /// Required designer variable.

@@ -83,14 +83,42 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Bank_dbDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Bank_dbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bank_dbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Bank_dbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bank_dbDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClientAccount.cs">
       <DependentUpon>Bankify_model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form_Admin.cs">
+    <Compile Include="Form_Admin_BankAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Admin.Designer.cs">
-      <DependentUpon>Form_Admin.cs</DependentUpon>
+    <Compile Include="Form_Admin_BankAccount.Designer.cs">
+      <DependentUpon>Form_Admin_BankAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Admin_ClientData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Admin_ClientData.Designer.cs">
+      <DependentUpon>Form_Admin_ClientData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Admin_LoginAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Admin_LoginAccount.Designer.cs">
+      <DependentUpon>Form_Admin_LoginAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Admin_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Admin_Menu.Designer.cs">
+      <DependentUpon>Form_Admin_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Client.cs">
       <SubType>Form</SubType>
@@ -124,8 +152,17 @@
     <Compile Include="Tranzaction.cs">
       <DependentUpon>Bankify_model.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form_Admin.resx">
-      <DependentUpon>Form_Admin.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Admin_BankAccount.resx">
+      <DependentUpon>Form_Admin_BankAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Admin_ClientData.resx">
+      <DependentUpon>Form_Admin_ClientData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Admin_LoginAccount.resx">
+      <DependentUpon>Form_Admin_LoginAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Admin_Menu.resx">
+      <DependentUpon>Form_Admin_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Client.resx">
       <DependentUpon>Form_Client.cs</DependentUpon>
@@ -176,6 +213,28 @@
     </None>
     <None Include="Bank_dbDataSet1.xss">
       <DependentUpon>Bank_dbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Bank_dbDataSet2.xsc">
+      <DependentUpon>Bank_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Bank_dbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bank_dbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bank_dbDataSet2.xss">
+      <DependentUpon>Bank_dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Bank_dbDataSet3.xsc">
+      <DependentUpon>Bank_dbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Bank_dbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Bank_dbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Bank_dbDataSet3.xss">
+      <DependentUpon>Bank_dbDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
