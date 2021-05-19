@@ -101,3 +101,8 @@ D:\Downloads\Bankify(1)\Bankify\Bankify\obj\Debug\Bankify.csproj.CopyComplete
 D:\Downloads\Bankify(1)\Bankify\Bankify\obj\Debug\Bankify.exe
 D:\Downloads\Bankify(1)\Bankify\Bankify\obj\Debug\Bankify.pdb
 C:\Users\home\ProiectII\Bankify\Bankify\obj\Debug\Bankify.Form_Transfer.resources
+C:\Users\home\ProiectII\Bankify\Bankify\obj\Debug\Bankify.Form_ExtrasCont.resources
+C:\Users\home\ProiectII\Bankify\Bankify\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\home\ProiectII\Bankify\Bankify\obj\Debug\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\home\ProiectII\Bankify\Bankify\obj\Debug\Interop.VBIDE.dll
+C:\Users\home\ProiectII\Bankify\Bankify\obj\Debug\Bankify.csproj.ResolveComReference.cache
