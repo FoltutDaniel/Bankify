@@ -129,6 +129,7 @@ namespace Bankify
                     this.bankAccountTableAdapter.Update(iban_TB.Text, currency_CB.Text, int.Parse(ammount_TB.Text), int.Parse(clientID_TB.Text),
                         bankAccount.account_id, bankAccount.iban, bankAccount.currency, bankAccount.amount, bankAccount.client_id);
                     MessageBox.Show("Modificare reusita!");
+                    this.bankAccountTableAdapter.Fill(this.bank_dbDataSet3.BankAccount);
                 }
                 catch
                 {
