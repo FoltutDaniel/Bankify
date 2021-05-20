@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Bankify
 {
     public partial class Form_Admin_BankAccount : Form
     {
+        int numberPressed = 0;
         public Form_Admin_BankAccount()
         {
             InitializeComponent();
@@ -150,6 +152,48 @@ namespace Bankify
             catch
             {
                 MessageBox.Show("Click in afara ariei de informatie!");
+            }
+        }
+
+        private void button_searchByName_Click(object sender, EventArgs e)
+        {
+            numberPressed++;
+            if (numberPressed == 1)
+            {
+                label_firstName.Visible = true;
+                label_name.Visible = true;
+                textBox_firstName.Visible = true;
+                textBox_lastName.Visible = true;
+            }
+            else
+            {
+                numberPressed = 0;
+                label_firstName.Visible = false;
+                label_name.Visible = false;
+                textBox_firstName.Text = "";
+                textBox_lastName.Text = "";
+                textBox_firstName.Visible = false;
+                textBox_lastName.Visible = false;
+                string lastName = textBox_lastName.Text;
+                string firstName = textBox_firstName.Text;
+                DataSet ds = new DataSet();
+                using (var db=new Bank_dbEntities())
+                {
+                    using (SqlConnection con = new SqlConnection(db.Database.Connection.ConnectionString))
+                    {
+                        con.Open();
+                        SqlCommand command = new SqlCommand("SELECT * FROM BankAccount " +
+                                                             "WHERE client_id = (SELECT client_id FROM ClientAccount " +
+                                                                               "WHERE last_name=@lastName AND first_name=@firstName)", con);
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        adapter.SelectCommand.Parameters.AddWithValue("@lastName", lastName);
+                        adapter.SelectCommand.Parameters.AddWithValue("@firstName", firstName);
+                        adapter.Fill(ds);
+                        con.Close();
+                    }
+
+                }
+                dataGrid_BA.DataSource = ds.Tables[0];
             }
         }
     }

@@ -96,6 +96,7 @@
     <Compile Include="ClientAccount.cs">
       <DependentUpon>Bankify_model.tt</DependentUpon>
     </Compile>
+    <Compile Include="CurrencyConverter.cs" />
     <Compile Include="Form_Admin_BankAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +126,12 @@
     </Compile>
     <Compile Include="Form_Client.Designer.cs">
       <DependentUpon>Form_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Convert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Convert.Designer.cs">
+      <DependentUpon>Form_Convert.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_ExtrasCont.cs">
       <SubType>Form</SubType>
@@ -166,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Client.resx">
       <DependentUpon>Form_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Convert.resx">
+      <DependentUpon>Form_Convert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ExtrasCont.resx">
       <DependentUpon>Form_ExtrasCont.cs</DependentUpon>

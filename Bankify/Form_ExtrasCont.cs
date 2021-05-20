@@ -92,6 +92,7 @@ namespace Bankify
         private void button_viewAll_Click(object sender, EventArgs e)
         {
             dataGridView_ExtrasCont.DataSource = GetData().Tables[0];
+            contentTable = GetData().Tables[0];
         }
 
         private void button_ExportExcel_Click(object sender, EventArgs e)

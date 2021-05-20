@@ -50,6 +50,11 @@ namespace Bankify
             this.editBA_BTN = new System.Windows.Forms.Button();
             this.deleteBA_BTN = new System.Windows.Forms.Button();
             this.currency_CB = new System.Windows.Forms.ComboBox();
+            this.button_searchByName = new System.Windows.Forms.Button();
+            this.textBox_lastName = new System.Windows.Forms.TextBox();
+            this.textBox_firstName = new System.Windows.Forms.TextBox();
+            this.label_name = new System.Windows.Forms.Label();
+            this.label_firstName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_BA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bankAccountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bank_dbDataSet3)).BeginInit();
@@ -224,11 +229,62 @@ namespace Bankify
             this.currency_CB.Size = new System.Drawing.Size(121, 21);
             this.currency_CB.TabIndex = 12;
             // 
+            // button_searchByName
+            // 
+            this.button_searchByName.Location = new System.Drawing.Point(414, 311);
+            this.button_searchByName.Name = "button_searchByName";
+            this.button_searchByName.Size = new System.Drawing.Size(90, 45);
+            this.button_searchByName.TabIndex = 13;
+            this.button_searchByName.Text = "Search By Name";
+            this.button_searchByName.UseVisualStyleBackColor = true;
+            this.button_searchByName.Click += new System.EventHandler(this.button_searchByName_Click);
+            // 
+            // textBox_lastName
+            // 
+            this.textBox_lastName.Location = new System.Drawing.Point(608, 302);
+            this.textBox_lastName.Name = "textBox_lastName";
+            this.textBox_lastName.Size = new System.Drawing.Size(100, 20);
+            this.textBox_lastName.TabIndex = 14;
+            this.textBox_lastName.Visible = false;
+            // 
+            // textBox_firstName
+            // 
+            this.textBox_firstName.Location = new System.Drawing.Point(608, 336);
+            this.textBox_firstName.Name = "textBox_firstName";
+            this.textBox_firstName.Size = new System.Drawing.Size(100, 20);
+            this.textBox_firstName.TabIndex = 15;
+            this.textBox_firstName.Visible = false;
+            // 
+            // label_name
+            // 
+            this.label_name.AutoSize = true;
+            this.label_name.Location = new System.Drawing.Point(541, 305);
+            this.label_name.Name = "label_name";
+            this.label_name.Size = new System.Drawing.Size(61, 13);
+            this.label_name.TabIndex = 16;
+            this.label_name.Text = "Last Name:";
+            this.label_name.Visible = false;
+            // 
+            // label_firstName
+            // 
+            this.label_firstName.AutoSize = true;
+            this.label_firstName.Location = new System.Drawing.Point(541, 343);
+            this.label_firstName.Name = "label_firstName";
+            this.label_firstName.Size = new System.Drawing.Size(57, 13);
+            this.label_firstName.TabIndex = 17;
+            this.label_firstName.Text = "First Name";
+            this.label_firstName.Visible = false;
+            // 
             // Form_Admin_BankAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label_firstName);
+            this.Controls.Add(this.label_name);
+            this.Controls.Add(this.textBox_firstName);
+            this.Controls.Add(this.textBox_lastName);
+            this.Controls.Add(this.button_searchByName);
             this.Controls.Add(this.currency_CB);
             this.Controls.Add(this.deleteBA_BTN);
             this.Controls.Add(this.editBA_BTN);
@@ -274,5 +330,10 @@ namespace Bankify
         private System.Windows.Forms.Button editBA_BTN;
         private System.Windows.Forms.Button deleteBA_BTN;
         private System.Windows.Forms.ComboBox currency_CB;
+        private System.Windows.Forms.Button button_searchByName;
+        private System.Windows.Forms.TextBox textBox_lastName;
+        private System.Windows.Forms.TextBox textBox_firstName;
+        private System.Windows.Forms.Label label_name;
+        private System.Windows.Forms.Label label_firstName;
     }
 }

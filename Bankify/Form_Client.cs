@@ -106,10 +106,5 @@ namespace Bankify
             Form_ExtrasCont form_ExtrasCont = new Form_ExtrasCont(iban);
             form_ExtrasCont.Show();
         }
-
-        private void button_transferOut_Click(object sender, EventArgs e)
-        {
-            button_Transfer_Click(sender,e);
-        }
     }
 }

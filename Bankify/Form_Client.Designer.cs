@@ -36,7 +36,6 @@
             this.button_Transfer = new System.Windows.Forms.Button();
             this.button_ExtrasCont = new System.Windows.Forms.Button();
             this.bankAccountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button_transferOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bank_dbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bankAccountBindingSource)).BeginInit();
@@ -75,7 +74,7 @@
             this.button_Transfer.Name = "button_Transfer";
             this.button_Transfer.Size = new System.Drawing.Size(90, 43);
             this.button_Transfer.TabIndex = 2;
-            this.button_Transfer.Text = "Transfer intre conturi";
+            this.button_Transfer.Text = "Transfer";
             this.button_Transfer.UseVisualStyleBackColor = true;
             this.button_Transfer.Click += new System.EventHandler(this.button_Transfer_Click);
             // 
@@ -89,22 +88,11 @@
             this.button_ExtrasCont.UseVisualStyleBackColor = true;
             this.button_ExtrasCont.Click += new System.EventHandler(this.button_ExtrasCont_Click);
             // 
-            // button_transferOut
-            // 
-            this.button_transferOut.Location = new System.Drawing.Point(241, 202);
-            this.button_transferOut.Name = "button_transferOut";
-            this.button_transferOut.Size = new System.Drawing.Size(90, 43);
-            this.button_transferOut.TabIndex = 4;
-            this.button_transferOut.Text = "Transfer in alt cont";
-            this.button_transferOut.UseVisualStyleBackColor = true;
-            this.button_transferOut.Click += new System.EventHandler(this.button_transferOut_Click);
-            // 
             // Form_Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 480);
-            this.Controls.Add(this.button_transferOut);
             this.Controls.Add(this.button_ExtrasCont);
             this.Controls.Add(this.button_Transfer);
             this.Controls.Add(this.dataGridView_Client);
@@ -128,6 +116,5 @@
         private System.Windows.Forms.DataGridView dataGridView_Client;
         private System.Windows.Forms.Button button_Transfer;
         private System.Windows.Forms.Button button_ExtrasCont;
-        private System.Windows.Forms.Button button_transferOut;
     }
 }

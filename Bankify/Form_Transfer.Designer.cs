@@ -37,7 +37,7 @@
             this.textBox_Amount = new System.Windows.Forms.TextBox();
             this.textBox_Currency = new System.Windows.Forms.TextBox();
             this.button_FinishTransf = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_finishTransferOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -114,22 +114,22 @@
             this.button_FinishTransf.UseVisualStyleBackColor = true;
             this.button_FinishTransf.Click += new System.EventHandler(this.button_FinishTransf_Click);
             // 
-            // button1
+            // button_finishTransferOut
             // 
-            this.button1.Location = new System.Drawing.Point(228, 222);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 62);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Finalizeaza transferul intr-un cont exterior";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_finishTransferOut.Location = new System.Drawing.Point(228, 222);
+            this.button_finishTransferOut.Name = "button_finishTransferOut";
+            this.button_finishTransferOut.Size = new System.Drawing.Size(90, 62);
+            this.button_finishTransferOut.TabIndex = 11;
+            this.button_finishTransferOut.Text = "Finalizeaza transferul intr-un cont exterior";
+            this.button_finishTransferOut.UseVisualStyleBackColor = true;
+            this.button_finishTransferOut.Click += new System.EventHandler(this.button_finishTransferOut_Click);
             // 
             // Form_Transfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_finishTransferOut);
             this.Controls.Add(this.button_FinishTransf);
             this.Controls.Add(this.textBox_Currency);
             this.Controls.Add(this.textBox_Amount);
@@ -157,6 +157,6 @@
         private System.Windows.Forms.TextBox textBox_Amount;
         private System.Windows.Forms.TextBox textBox_Currency;
         private System.Windows.Forms.Button button_FinishTransf;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_finishTransferOut;
     }
 }
