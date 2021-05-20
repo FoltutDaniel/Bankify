@@ -114,6 +114,8 @@ namespace Bankify
                     db.SaveChanges();
                     dataGridView_accounts.Rows.RemoveAt(this.dataGridView_accounts.CurrentCell.RowIndex);
                     MessageBox.Show("Stergere reusita!");
+                    this.clientAccountTableAdapter.Fill(this.bank_dbDataSet.ClientAccount);
+
                 }
                 catch
                 {

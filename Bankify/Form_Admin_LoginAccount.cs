@@ -74,7 +74,10 @@ namespace Bankify
                                      select c).First();
                 this.loginAccountTableAdapter.Update(username_TB.Text, password_Tb.Text, accountype_CB.Text, login_account.login_id,
                     login_account.login_username, login_account.login_password, login_account.account_type);
+                db.SaveChanges();
                 MessageBox.Show("Modificare reusita!");
+                this.loginAccountTableAdapter.Fill(this.bank_dbDataSet2.LoginAccount);
+
 
             }
         }
@@ -108,6 +111,8 @@ namespace Bankify
                     db.SaveChanges();
                     dataGridView_LA.Rows.RemoveAt(this.dataGridView_LA.CurrentCell.RowIndex);
                     MessageBox.Show("Stergere reusita!");
+                    this.loginAccountTableAdapter.Fill(this.bank_dbDataSet2.LoginAccount);
+
                 }
                 catch
                 {
