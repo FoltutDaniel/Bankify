@@ -50,11 +50,10 @@ namespace Bankify
             this.editBA_BTN = new System.Windows.Forms.Button();
             this.deleteBA_BTN = new System.Windows.Forms.Button();
             this.currency_CB = new System.Windows.Forms.ComboBox();
-            this.button_searchByName = new System.Windows.Forms.Button();
-            this.textBox_lastName = new System.Windows.Forms.TextBox();
-            this.textBox_firstName = new System.Windows.Forms.TextBox();
-            this.label_name = new System.Windows.Forms.Label();
-            this.label_firstName = new System.Windows.Forms.Label();
+            this.button_searchByCNP = new System.Windows.Forms.Button();
+            this.CNP_LBL = new System.Windows.Forms.Label();
+            this.SCNP_TB = new System.Windows.Forms.TextBox();
+            this.showAll_BTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_BA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bankAccountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bank_dbDataSet3)).BeginInit();
@@ -71,7 +70,7 @@ namespace Bankify
             this.amountDataGridViewTextBoxColumn,
             this.clientidDataGridViewTextBoxColumn});
             this.dataGrid_BA.DataSource = this.bankAccountBindingSource;
-            this.dataGrid_BA.Location = new System.Drawing.Point(241, 35);
+            this.dataGrid_BA.Location = new System.Drawing.Point(223, 41);
             this.dataGrid_BA.Name = "dataGrid_BA";
             this.dataGrid_BA.Size = new System.Drawing.Size(547, 221);
             this.dataGrid_BA.TabIndex = 0;
@@ -229,62 +228,51 @@ namespace Bankify
             this.currency_CB.Size = new System.Drawing.Size(121, 21);
             this.currency_CB.TabIndex = 12;
             // 
-            // button_searchByName
+            // button_searchByCNP
             // 
-            this.button_searchByName.Location = new System.Drawing.Point(414, 311);
-            this.button_searchByName.Name = "button_searchByName";
-            this.button_searchByName.Size = new System.Drawing.Size(90, 45);
-            this.button_searchByName.TabIndex = 13;
-            this.button_searchByName.Text = "Search By Name";
-            this.button_searchByName.UseVisualStyleBackColor = true;
-            this.button_searchByName.Click += new System.EventHandler(this.button_searchByName_Click);
+            this.button_searchByCNP.Location = new System.Drawing.Point(414, 311);
+            this.button_searchByCNP.Name = "button_searchByCNP";
+            this.button_searchByCNP.Size = new System.Drawing.Size(90, 45);
+            this.button_searchByCNP.TabIndex = 13;
+            this.button_searchByCNP.Text = "Search By CNP";
+            this.button_searchByCNP.UseVisualStyleBackColor = true;
+            this.button_searchByCNP.Click += new System.EventHandler(this.button_searchByName_Click);
             // 
-            // textBox_lastName
+            // CNP_LBL
             // 
-            this.textBox_lastName.Location = new System.Drawing.Point(608, 302);
-            this.textBox_lastName.Name = "textBox_lastName";
-            this.textBox_lastName.Size = new System.Drawing.Size(100, 20);
-            this.textBox_lastName.TabIndex = 14;
-            this.textBox_lastName.Visible = false;
+            this.CNP_LBL.AutoSize = true;
+            this.CNP_LBL.Location = new System.Drawing.Point(535, 327);
+            this.CNP_LBL.Name = "CNP_LBL";
+            this.CNP_LBL.Size = new System.Drawing.Size(29, 13);
+            this.CNP_LBL.TabIndex = 14;
+            this.CNP_LBL.Text = "CNP";
             // 
-            // textBox_firstName
+            // SCNP_TB
             // 
-            this.textBox_firstName.Location = new System.Drawing.Point(608, 336);
-            this.textBox_firstName.Name = "textBox_firstName";
-            this.textBox_firstName.Size = new System.Drawing.Size(100, 20);
-            this.textBox_firstName.TabIndex = 15;
-            this.textBox_firstName.Visible = false;
+            this.SCNP_TB.Location = new System.Drawing.Point(588, 324);
+            this.SCNP_TB.Name = "SCNP_TB";
+            this.SCNP_TB.Size = new System.Drawing.Size(100, 20);
+            this.SCNP_TB.TabIndex = 15;
             // 
-            // label_name
+            // showAll_BTN
             // 
-            this.label_name.AutoSize = true;
-            this.label_name.Location = new System.Drawing.Point(541, 305);
-            this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(61, 13);
-            this.label_name.TabIndex = 16;
-            this.label_name.Text = "Last Name:";
-            this.label_name.Visible = false;
-            // 
-            // label_firstName
-            // 
-            this.label_firstName.AutoSize = true;
-            this.label_firstName.Location = new System.Drawing.Point(541, 343);
-            this.label_firstName.Name = "label_firstName";
-            this.label_firstName.Size = new System.Drawing.Size(57, 13);
-            this.label_firstName.TabIndex = 17;
-            this.label_firstName.Text = "First Name";
-            this.label_firstName.Visible = false;
+            this.showAll_BTN.Location = new System.Drawing.Point(414, 376);
+            this.showAll_BTN.Name = "showAll_BTN";
+            this.showAll_BTN.Size = new System.Drawing.Size(90, 47);
+            this.showAll_BTN.TabIndex = 16;
+            this.showAll_BTN.Text = "Show All Entries";
+            this.showAll_BTN.UseVisualStyleBackColor = true;
+            this.showAll_BTN.Click += new System.EventHandler(this.showAll_BTN_Click);
             // 
             // Form_Admin_BankAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label_firstName);
-            this.Controls.Add(this.label_name);
-            this.Controls.Add(this.textBox_firstName);
-            this.Controls.Add(this.textBox_lastName);
-            this.Controls.Add(this.button_searchByName);
+            this.Controls.Add(this.showAll_BTN);
+            this.Controls.Add(this.SCNP_TB);
+            this.Controls.Add(this.CNP_LBL);
+            this.Controls.Add(this.button_searchByCNP);
             this.Controls.Add(this.currency_CB);
             this.Controls.Add(this.deleteBA_BTN);
             this.Controls.Add(this.editBA_BTN);
@@ -298,7 +286,7 @@ namespace Bankify
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGrid_BA);
             this.Name = "Form_Admin_BankAccount";
-            this.Text = "Form_Admin_AddBankAccount";
+            this.Text = "Admin Add Bank Account";
             this.Load += new System.EventHandler(this.Form_Admin_BankAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_BA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bankAccountBindingSource)).EndInit();
@@ -330,10 +318,9 @@ namespace Bankify
         private System.Windows.Forms.Button editBA_BTN;
         private System.Windows.Forms.Button deleteBA_BTN;
         private System.Windows.Forms.ComboBox currency_CB;
-        private System.Windows.Forms.Button button_searchByName;
-        private System.Windows.Forms.TextBox textBox_lastName;
-        private System.Windows.Forms.TextBox textBox_firstName;
-        private System.Windows.Forms.Label label_name;
-        private System.Windows.Forms.Label label_firstName;
+        private System.Windows.Forms.Button button_searchByCNP;
+        private System.Windows.Forms.Label CNP_LBL;
+        private System.Windows.Forms.TextBox SCNP_TB;
+        private System.Windows.Forms.Button showAll_BTN;
     }
 }

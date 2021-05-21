@@ -23,6 +23,7 @@
     <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="birthday" Type="datetime" Nullable="false" />
     <Property Name="login_id" Type="int" Nullable="false" />
+    <Property Name="CNP" Type="varchar" MaxLength="14" />
   </EntityType>
   <EntityType Name="LoginAccount">
     <Key>
@@ -32,6 +33,16 @@
     <Property Name="login_username" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="login_password" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="account_type" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Tranzaction">
     <Key>
@@ -45,7 +56,7 @@
     <Property Name="transaction_date" Type="datetime" Nullable="false" />
     <Property Name="bank_account_from_id" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="FK__BankAccou__clien__4E88ABD4">
+  <Association Name="FK__BankAccou__clien__2A4B4B5E">
     <End Role="ClientAccount" Type="Self.ClientAccount" Multiplicity="1" />
     <End Role="BankAccount" Type="Self.BankAccount" Multiplicity="*" />
     <ReferentialConstraint>
@@ -57,7 +68,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ClientAcc__login__4BAC3F29">
+  <Association Name="FK__ClientAcc__login__2B3F6F97">
     <End Role="LoginAccount" Type="Self.LoginAccount" Multiplicity="1" />
     <End Role="ClientAccount" Type="Self.ClientAccount" Multiplicity="*" />
     <ReferentialConstraint>
@@ -69,7 +80,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Tranzacti__bank___5165187F">
+  <Association Name="FK__Tranzacti__bank___2C3393D0">
     <End Role="BankAccount" Type="Self.BankAccount" Multiplicity="1" />
     <End Role="Tranzaction" Type="Self.Tranzaction" Multiplicity="*" />
     <ReferentialConstraint>
@@ -85,16 +96,17 @@
     <EntitySet Name="BankAccount" EntityType="Self.BankAccount" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ClientAccount" EntityType="Self.ClientAccount" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoginAccount" EntityType="Self.LoginAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tranzaction" EntityType="Self.Tranzaction" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__BankAccou__clien__4E88ABD4" Association="Self.FK__BankAccou__clien__4E88ABD4">
+    <AssociationSet Name="FK__BankAccou__clien__2A4B4B5E" Association="Self.FK__BankAccou__clien__2A4B4B5E">
       <End Role="ClientAccount" EntitySet="ClientAccount" />
       <End Role="BankAccount" EntitySet="BankAccount" />
     </AssociationSet>
-    <AssociationSet Name="FK__ClientAcc__login__4BAC3F29" Association="Self.FK__ClientAcc__login__4BAC3F29">
+    <AssociationSet Name="FK__ClientAcc__login__2B3F6F97" Association="Self.FK__ClientAcc__login__2B3F6F97">
       <End Role="LoginAccount" EntitySet="LoginAccount" />
       <End Role="ClientAccount" EntitySet="ClientAccount" />
     </AssociationSet>
-    <AssociationSet Name="FK__Tranzacti__bank___5165187F" Association="Self.FK__Tranzacti__bank___5165187F">
+    <AssociationSet Name="FK__Tranzacti__bank___2C3393D0" Association="Self.FK__Tranzacti__bank___2C3393D0">
       <End Role="BankAccount" EntitySet="BankAccount" />
       <End Role="Tranzaction" EntitySet="Tranzaction" />
     </AssociationSet>

@@ -29,6 +29,7 @@ namespace Bankify
         public string email { get; set; }
         public System.DateTime birthday { get; set; }
         public int login_id { get; set; }
+        public string CNP { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BankAccount> BankAccount { get; set; }

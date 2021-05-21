@@ -29,5 +29,6 @@ namespace Bankify
         public virtual DbSet<ClientAccount> ClientAccount { get; set; }
         public virtual DbSet<LoginAccount> LoginAccount { get; set; }
         public virtual DbSet<Tranzaction> Tranzaction { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

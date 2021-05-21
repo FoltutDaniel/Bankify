@@ -27,6 +27,7 @@
     <Property Name="login_id" Type="Int32" Nullable="false" />
     <NavigationProperty Name="BankAccount" Relationship="Self.FK__BankAccou__clien__4E88ABD4" FromRole="ClientAccount" ToRole="BankAccount" />
     <NavigationProperty Name="LoginAccount" Relationship="Self.FK__ClientAcc__login__4BAC3F29" FromRole="ClientAccount" ToRole="LoginAccount" />
+    <Property Name="CNP" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="LoginAccount">
     <Key>
@@ -104,5 +105,16 @@
       <End Role="LoginAccount" EntitySet="LoginAccount" />
       <End Role="ClientAccount" EntitySet="ClientAccount" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="Bank_dbModel.sysdiagrams" />
   </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>

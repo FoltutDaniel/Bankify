@@ -39,7 +39,7 @@
             // dataGridView_ExtrasCont
             // 
             this.dataGridView_ExtrasCont.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ExtrasCont.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView_ExtrasCont.Location = new System.Drawing.Point(12, 12);
             this.dataGridView_ExtrasCont.Name = "dataGridView_ExtrasCont";
             this.dataGridView_ExtrasCont.ReadOnly = true;
             this.dataGridView_ExtrasCont.Size = new System.Drawing.Size(564, 308);
@@ -47,7 +47,7 @@
             // 
             // button_fromIban
             // 
-            this.button_fromIban.Location = new System.Drawing.Point(36, 336);
+            this.button_fromIban.Location = new System.Drawing.Point(12, 326);
             this.button_fromIban.Name = "button_fromIban";
             this.button_fromIban.Size = new System.Drawing.Size(78, 47);
             this.button_fromIban.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             // button_viewAll
             // 
-            this.button_viewAll.Location = new System.Drawing.Point(232, 336);
+            this.button_viewAll.Location = new System.Drawing.Point(180, 326);
             this.button_viewAll.Name = "button_viewAll";
             this.button_viewAll.Size = new System.Drawing.Size(78, 47);
             this.button_viewAll.TabIndex = 3;
@@ -67,7 +67,7 @@
             // 
             // button_toIban
             // 
-            this.button_toIban.Location = new System.Drawing.Point(138, 336);
+            this.button_toIban.Location = new System.Drawing.Point(96, 326);
             this.button_toIban.Name = "button_toIban";
             this.button_toIban.Size = new System.Drawing.Size(78, 47);
             this.button_toIban.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             // button_ExportExcel
             // 
-            this.button_ExportExcel.Location = new System.Drawing.Point(486, 336);
+            this.button_ExportExcel.Location = new System.Drawing.Point(264, 326);
             this.button_ExportExcel.Name = "button_ExportExcel";
             this.button_ExportExcel.Size = new System.Drawing.Size(78, 47);
             this.button_ExportExcel.TabIndex = 4;
@@ -89,14 +89,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 439);
+            this.ClientSize = new System.Drawing.Size(589, 386);
             this.Controls.Add(this.button_ExportExcel);
             this.Controls.Add(this.button_viewAll);
             this.Controls.Add(this.button_toIban);
             this.Controls.Add(this.button_fromIban);
             this.Controls.Add(this.dataGridView_ExtrasCont);
             this.Name = "Form_ExtrasCont";
-            this.Text = "Form_ExtrasCont";
+            this.Text = "Extras Cont";
             this.Load += new System.EventHandler(this.Form_ExtrasCont_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ExtrasCont)).EndInit();
             this.ResumeLayout(false);

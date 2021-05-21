@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 84);
+            this.label1.Location = new System.Drawing.Point(26, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 120);
+            this.label2.Location = new System.Drawing.Point(26, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 1;
@@ -75,7 +75,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 148);
+            this.label4.Location = new System.Drawing.Point(26, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 6;
@@ -84,7 +84,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 183);
+            this.label5.Location = new System.Drawing.Point(26, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 7;
@@ -106,7 +106,7 @@
             // 
             // button_FinishTransf
             // 
-            this.button_FinishTransf.Location = new System.Drawing.Point(108, 222);
+            this.button_FinishTransf.Location = new System.Drawing.Point(29, 222);
             this.button_FinishTransf.Name = "button_FinishTransf";
             this.button_FinishTransf.Size = new System.Drawing.Size(90, 62);
             this.button_FinishTransf.TabIndex = 10;
@@ -116,7 +116,7 @@
             // 
             // button_finishTransferOut
             // 
-            this.button_finishTransferOut.Location = new System.Drawing.Point(228, 222);
+            this.button_finishTransferOut.Location = new System.Drawing.Point(196, 222);
             this.button_finishTransferOut.Name = "button_finishTransferOut";
             this.button_finishTransferOut.Size = new System.Drawing.Size(90, 62);
             this.button_finishTransferOut.TabIndex = 11;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 450);
+            this.ClientSize = new System.Drawing.Size(344, 409);
             this.Controls.Add(this.button_finishTransferOut);
             this.Controls.Add(this.button_FinishTransf);
             this.Controls.Add(this.textBox_Currency);
@@ -140,7 +140,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form_Transfer";
-            this.Text = "Form_Transfer";
+            this.Text = "Transfer";
+            this.Load += new System.EventHandler(this.Form_Transfer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

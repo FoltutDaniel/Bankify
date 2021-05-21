@@ -20,9 +20,9 @@ namespace Bankify {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Bank_dbDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Bank_dbDataSet4")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Bank_dbDataSet : global::System.Data.DataSet {
+    public partial class Bank_dbDataSet4 : global::System.Data.DataSet {
         
         private ClientAccountDataTable tableClientAccount;
         
@@ -30,7 +30,7 @@ namespace Bankify {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public Bank_dbDataSet() {
+        public Bank_dbDataSet4() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Bankify {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected Bank_dbDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Bank_dbDataSet4(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Bankify {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Bank_dbDataSet cln = ((Bank_dbDataSet)(base.Clone()));
+            Bank_dbDataSet4 cln = ((Bank_dbDataSet4)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Bankify {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Bank_dbDataSet";
+            this.DataSetName = "Bank_dbDataSet4";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Bank_dbDataSet.xsd";
+            this.Namespace = "http://tempuri.org/Bank_dbDataSet4.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableClientAccount = new ClientAccountDataTable();
@@ -225,7 +225,7 @@ namespace Bankify {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Bank_dbDataSet ds = new Bank_dbDataSet();
+            Bank_dbDataSet4 ds = new Bank_dbDataSet4();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -615,7 +615,7 @@ namespace Bankify {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Bank_dbDataSet ds = new Bank_dbDataSet();
+                Bank_dbDataSet4 ds = new Bank_dbDataSet4();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -851,7 +851,7 @@ namespace Bankify {
         }
     }
 }
-namespace Bankify.Bank_dbDataSetTableAdapters {
+namespace Bankify.Bank_dbDataSet4TableAdapters {
     
     
     /// <summary>
@@ -1065,7 +1065,7 @@ SELECT client_id, first_name, last_name, age, country, phone_number, email, birt
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Bank_dbDataSet.ClientAccountDataTable dataTable) {
+        public virtual int Fill(Bank_dbDataSet4.ClientAccountDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1078,9 +1078,9 @@ SELECT client_id, first_name, last_name, age, country, phone_number, email, birt
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Bank_dbDataSet.ClientAccountDataTable GetData() {
+        public virtual Bank_dbDataSet4.ClientAccountDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Bank_dbDataSet.ClientAccountDataTable dataTable = new Bank_dbDataSet.ClientAccountDataTable();
+            Bank_dbDataSet4.ClientAccountDataTable dataTable = new Bank_dbDataSet4.ClientAccountDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1088,14 +1088,14 @@ SELECT client_id, first_name, last_name, age, country, phone_number, email, birt
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Bank_dbDataSet.ClientAccountDataTable dataTable) {
+        public virtual int Update(Bank_dbDataSet4.ClientAccountDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Bank_dbDataSet dataSet) {
+        public virtual int Update(Bank_dbDataSet4 dataSet) {
             return this.Adapter.Update(dataSet, "ClientAccount");
         }
         
@@ -1479,7 +1479,7 @@ SELECT client_id, first_name, last_name, age, country, phone_number, email, birt
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(Bank_dbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Bank_dbDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clientAccountTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.ClientAccount.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1498,7 +1498,7 @@ SELECT client_id, first_name, last_name, age, country, phone_number, email, birt
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(Bank_dbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Bank_dbDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._clientAccountTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.ClientAccount.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1516,7 +1516,7 @@ SELECT client_id, first_name, last_name, age, country, phone_number, email, birt
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(Bank_dbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Bank_dbDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._clientAccountTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.ClientAccount.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1558,7 +1558,7 @@ SELECT client_id, first_name, last_name, age, country, phone_number, email, birt
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(Bank_dbDataSet dataSet) {
+        public virtual int UpdateAll(Bank_dbDataSet4 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

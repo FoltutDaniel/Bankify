@@ -15,6 +15,7 @@ namespace Bankify
         public Form_Admin_Menu()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void CD_BTN_Click(object sender, EventArgs e)
@@ -33,6 +34,17 @@ namespace Bankify
         {
             Form_Admin_BankAccount form_Admin_BankAccount = new Form_Admin_BankAccount();
             form_Admin_BankAccount.Show();
+        }
+
+        private void Form_Admin_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_add_funds_Click(object sender, EventArgs e)
+        {
+            Form_Admin_Add_Funds form_Admin_Add_Funds = new Form_Admin_Add_Funds();
+            form_Admin_Add_Funds.Show();
         }
     }
 }

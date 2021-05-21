@@ -31,13 +31,13 @@ namespace Bankify
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView_LA = new System.Windows.Forms.DataGridView();
-            this.bank_dbDataSet2 = new Bankify.Bank_dbDataSet2();
-            this.loginAccountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loginAccountTableAdapter = new Bankify.Bank_dbDataSet2TableAdapters.LoginAccountTableAdapter();
             this.loginidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginusernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loginpasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accounttypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginAccountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bank_dbDataSet2 = new Bankify.Bank_dbDataSet2();
+            this.loginAccountTableAdapter = new Bankify.Bank_dbDataSet2TableAdapters.LoginAccountTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,12 +48,16 @@ namespace Bankify
             this.editLA = new System.Windows.Forms.Button();
             this.deleteLA = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bank_dbDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginAccountBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bank_dbDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView_LA
             // 
+            this.dataGridView_LA.AllowUserToAddRows = false;
+            this.dataGridView_LA.AllowUserToDeleteRows = false;
+            this.dataGridView_LA.AllowUserToResizeColumns = false;
+            this.dataGridView_LA.AllowUserToResizeRows = false;
             this.dataGridView_LA.AutoGenerateColumns = false;
             this.dataGridView_LA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_LA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -62,25 +66,12 @@ namespace Bankify
             this.loginpasswordDataGridViewTextBoxColumn,
             this.accounttypeDataGridViewTextBoxColumn});
             this.dataGridView_LA.DataSource = this.loginAccountBindingSource;
-            this.dataGridView_LA.Location = new System.Drawing.Point(256, 49);
+            this.dataGridView_LA.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView_LA.Location = new System.Drawing.Point(257, 59);
             this.dataGridView_LA.Name = "dataGridView_LA";
             this.dataGridView_LA.Size = new System.Drawing.Size(444, 205);
             this.dataGridView_LA.TabIndex = 0;
             this.dataGridView_LA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_LA_CellClick);
-            // 
-            // bank_dbDataSet2
-            // 
-            this.bank_dbDataSet2.DataSetName = "Bank_dbDataSet2";
-            this.bank_dbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // loginAccountBindingSource
-            // 
-            this.loginAccountBindingSource.DataMember = "LoginAccount";
-            this.loginAccountBindingSource.DataSource = this.bank_dbDataSet2;
-            // 
-            // loginAccountTableAdapter
-            // 
-            this.loginAccountTableAdapter.ClearBeforeFill = true;
             // 
             // loginidDataGridViewTextBoxColumn
             // 
@@ -106,6 +97,20 @@ namespace Bankify
             this.accounttypeDataGridViewTextBoxColumn.DataPropertyName = "account_type";
             this.accounttypeDataGridViewTextBoxColumn.HeaderText = "account_type";
             this.accounttypeDataGridViewTextBoxColumn.Name = "accounttypeDataGridViewTextBoxColumn";
+            // 
+            // loginAccountBindingSource
+            // 
+            this.loginAccountBindingSource.DataMember = "LoginAccount";
+            this.loginAccountBindingSource.DataSource = this.bank_dbDataSet2;
+            // 
+            // bank_dbDataSet2
+            // 
+            this.bank_dbDataSet2.DataSetName = "Bank_dbDataSet2";
+            this.bank_dbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loginAccountTableAdapter
+            // 
+            this.loginAccountTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -136,14 +141,14 @@ namespace Bankify
             // 
             // username_TB
             // 
-            this.username_TB.Location = new System.Drawing.Point(99, 59);
+            this.username_TB.Location = new System.Drawing.Point(113, 59);
             this.username_TB.Name = "username_TB";
             this.username_TB.Size = new System.Drawing.Size(100, 20);
             this.username_TB.TabIndex = 4;
             // 
             // password_Tb
             // 
-            this.password_Tb.Location = new System.Drawing.Point(99, 101);
+            this.password_Tb.Location = new System.Drawing.Point(113, 101);
             this.password_Tb.Name = "password_Tb";
             this.password_Tb.Size = new System.Drawing.Size(100, 20);
             this.password_Tb.TabIndex = 5;
@@ -154,7 +159,7 @@ namespace Bankify
             this.accountype_CB.Items.AddRange(new object[] {
             "admin",
             "client"});
-            this.accountype_CB.Location = new System.Drawing.Point(113, 137);
+            this.accountype_CB.Location = new System.Drawing.Point(113, 142);
             this.accountype_CB.Name = "accountype_CB";
             this.accountype_CB.Size = new System.Drawing.Size(121, 21);
             this.accountype_CB.TabIndex = 6;
@@ -171,7 +176,7 @@ namespace Bankify
             // 
             // editLA
             // 
-            this.editLA.Location = new System.Drawing.Point(205, 306);
+            this.editLA.Location = new System.Drawing.Point(297, 306);
             this.editLA.Name = "editLA";
             this.editLA.Size = new System.Drawing.Size(129, 44);
             this.editLA.TabIndex = 8;
@@ -181,7 +186,7 @@ namespace Bankify
             // 
             // deleteLA
             // 
-            this.deleteLA.Location = new System.Drawing.Point(382, 306);
+            this.deleteLA.Location = new System.Drawing.Point(570, 306);
             this.deleteLA.Name = "deleteLA";
             this.deleteLA.Size = new System.Drawing.Size(131, 44);
             this.deleteLA.TabIndex = 9;
@@ -193,7 +198,7 @@ namespace Bankify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(722, 450);
             this.Controls.Add(this.deleteLA);
             this.Controls.Add(this.editLA);
             this.Controls.Add(this.AddLA);
@@ -205,11 +210,11 @@ namespace Bankify
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView_LA);
             this.Name = "Form_Admin_LoginAccount";
-            this.Text = "Form_Admin_AddLoginAccount";
+            this.Text = "Admin Add Login Account";
             this.Load += new System.EventHandler(this.Form_Admin_LoginAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_LA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bank_dbDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginAccountBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bank_dbDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

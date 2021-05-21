@@ -20,6 +20,7 @@ namespace Bankify
         public Form_ExtrasCont(string iban)
         {
             InitializeComponent();
+            CenterToScreen();
             this.iban = iban;
         }
 

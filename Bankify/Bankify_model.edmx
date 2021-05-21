@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Bank_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Bank_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BankAccount">
           <Key>
             <PropertyRef Name="account_id" />
@@ -28,6 +28,7 @@
           <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="birthday" Type="datetime" Nullable="false" />
           <Property Name="login_id" Type="int" Nullable="false" />
+          <Property Name="CNP" Type="varchar" MaxLength="14" />
         </EntityType>
         <EntityType Name="LoginAccount">
           <Key>
@@ -37,6 +38,16 @@
           <Property Name="login_username" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="login_password" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="account_type" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="Tranzaction">
           <Key>
@@ -50,7 +61,7 @@
           <Property Name="transaction_date" Type="datetime" Nullable="false" />
           <Property Name="bank_account_from_id" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__BankAccou__clien__4E88ABD4">
+        <Association Name="FK__BankAccou__clien__2A4B4B5E">
           <End Role="ClientAccount" Type="Self.ClientAccount" Multiplicity="1" />
           <End Role="BankAccount" Type="Self.BankAccount" Multiplicity="*" />
           <ReferentialConstraint>
@@ -62,7 +73,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ClientAcc__login__4BAC3F29">
+        <Association Name="FK__ClientAcc__login__2B3F6F97">
           <End Role="LoginAccount" Type="Self.LoginAccount" Multiplicity="1" />
           <End Role="ClientAccount" Type="Self.ClientAccount" Multiplicity="*" />
           <ReferentialConstraint>
@@ -74,7 +85,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Tranzacti__bank___5165187F">
+        <Association Name="FK__Tranzacti__bank___2C3393D0">
           <End Role="BankAccount" Type="Self.BankAccount" Multiplicity="1" />
           <End Role="Tranzaction" Type="Self.Tranzaction" Multiplicity="*" />
           <ReferentialConstraint>
@@ -90,22 +101,22 @@
           <EntitySet Name="BankAccount" EntityType="Self.BankAccount" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ClientAccount" EntityType="Self.ClientAccount" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoginAccount" EntityType="Self.LoginAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tranzaction" EntityType="Self.Tranzaction" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__BankAccou__clien__4E88ABD4" Association="Self.FK__BankAccou__clien__4E88ABD4">
+          <AssociationSet Name="FK__BankAccou__clien__2A4B4B5E" Association="Self.FK__BankAccou__clien__2A4B4B5E">
             <End Role="ClientAccount" EntitySet="ClientAccount" />
             <End Role="BankAccount" EntitySet="BankAccount" />
           </AssociationSet>
-          <AssociationSet Name="FK__ClientAcc__login__4BAC3F29" Association="Self.FK__ClientAcc__login__4BAC3F29">
+          <AssociationSet Name="FK__ClientAcc__login__2B3F6F97" Association="Self.FK__ClientAcc__login__2B3F6F97">
             <End Role="LoginAccount" EntitySet="LoginAccount" />
             <End Role="ClientAccount" EntitySet="ClientAccount" />
           </AssociationSet>
-          <AssociationSet Name="FK__Tranzacti__bank___5165187F" Association="Self.FK__Tranzacti__bank___5165187F">
+          <AssociationSet Name="FK__Tranzacti__bank___2C3393D0" Association="Self.FK__Tranzacti__bank___2C3393D0">
             <End Role="BankAccount" EntitySet="BankAccount" />
             <End Role="Tranzaction" EntitySet="Tranzaction" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Bank_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -136,6 +147,7 @@
           <Property Name="login_id" Type="Int32" Nullable="false" />
           <NavigationProperty Name="BankAccount" Relationship="Self.FK__BankAccou__clien__4E88ABD4" FromRole="ClientAccount" ToRole="BankAccount" />
           <NavigationProperty Name="LoginAccount" Relationship="Self.FK__ClientAcc__login__4BAC3F29" FromRole="ClientAccount" ToRole="LoginAccount" />
+          <Property Name="CNP" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="LoginAccount">
           <Key>
@@ -213,7 +225,18 @@
             <End Role="LoginAccount" EntitySet="LoginAccount" />
             <End Role="ClientAccount" EntitySet="ClientAccount" />
           </AssociationSet>
+          <EntitySet Name="sysdiagrams" EntityType="Bank_dbModel.sysdiagrams" />
         </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -234,6 +257,7 @@
           <EntitySetMapping Name="ClientAccount">
             <EntityTypeMapping TypeName="Bank_dbModel.ClientAccount">
               <MappingFragment StoreEntitySet="ClientAccount">
+                <ScalarProperty Name="CNP" ColumnName="CNP" />
                 <ScalarProperty Name="client_id" ColumnName="client_id" />
                 <ScalarProperty Name="first_name" ColumnName="first_name" />
                 <ScalarProperty Name="last_name" ColumnName="last_name" />
@@ -266,6 +290,17 @@
                 <ScalarProperty Name="currency" ColumnName="currency" />
                 <ScalarProperty Name="transaction_date" ColumnName="transaction_date" />
                 <ScalarProperty Name="bank_account_from_id" ColumnName="bank_account_from_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Bank_dbModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

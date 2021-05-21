@@ -91,7 +91,7 @@
             this.Controls.Add(this.textBox_username);
             this.Controls.Add(this.label1);
             this.Name = "Form_login";
-            this.Text = "Login_form";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

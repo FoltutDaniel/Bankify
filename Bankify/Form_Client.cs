@@ -17,6 +17,7 @@ namespace Bankify
         public Form_Client(int login_id)
         {
             InitializeComponent();
+            CenterToScreen();
             this.login_id = login_id;
             prepopulate();
         }

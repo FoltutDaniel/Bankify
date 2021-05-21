@@ -92,13 +92,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 480);
+            this.ClientSize = new System.Drawing.Size(601, 301);
             this.Controls.Add(this.button_ExtrasCont);
             this.Controls.Add(this.button_Transfer);
             this.Controls.Add(this.dataGridView_Client);
             this.Controls.Add(this.greetingLabel);
             this.Name = "Form_Client";
-            this.Text = "Form_Client";
+            this.Text = "Client";
             this.Load += new System.EventHandler(this.Form_Client_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bank_dbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Client)).EndInit();

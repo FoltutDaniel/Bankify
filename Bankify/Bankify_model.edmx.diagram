@@ -12,6 +12,7 @@
         <AssociationConnector Association="Bank_dbModel.FK__BankAccou__clien__4E88ABD4" ManuallyRouted="false" />
         <AssociationConnector Association="Bank_dbModel.FK__Tranzacti__bank___5165187F" ManuallyRouted="false" />
         <AssociationConnector Association="Bank_dbModel.FK__ClientAcc__login__4BAC3F29" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Bank_dbModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -24,6 +24,7 @@ namespace Bankify
         public Form_Transfer(string iban, string currency, int acc, int cl_id, Form_Client form)
         {
             InitializeComponent();
+            CenterToScreen();
             textBox_FromIban.Text = iban;
             textBox_Currency.Text = currency;
             fromAccount_id = acc;
@@ -194,6 +195,11 @@ namespace Bankify
         public double getToAmount()
         {
             return toAmount;
+        }
+
+        private void Form_Transfer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,101 +17,117 @@ namespace Bankify
         public Form_Admin_BankAccount()
         {
             InitializeComponent();
+            CenterToScreen();
+            currency_CB.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void Form_Admin_BankAccount_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'bank_dbDataSet3.BankAccount' table. You can move, or remove it, as needed.
             this.bankAccountTableAdapter.Fill(this.bank_dbDataSet3.BankAccount);
+            CNP_LBL.Visible = false;
+            SCNP_TB.Visible = false;
+            showAll_BTN.Visible = false;
 
         }
 
         private void addBA_BTN_Click(object sender, EventArgs e)
         {
             BankAccount bankAccount = new BankAccount();
-
-            using (var db = new Bank_dbEntities())
+            if (isFieldEmpty())
             {
-                try
+                MessageBox.Show("Toate spatiile trebuiesc completate!");
+            }
+            else
+            {
+                using (var db = new Bank_dbEntities())
                 {
                     try
                     {
-                        bankAccount.iban = iban_TB.Text;
-                        bankAccount.currency = currency_CB.Text;
-                        
-                        if(char.IsDigit(ammount_TB.Text, 0))
+                        try
                         {
-                            if (int.Parse(ammount_TB.Text) > 0)
+                            bankAccount.iban = iban_TB.Text;
+                            bankAccount.currency = currency_CB.Text;
+
+                            if (char.IsDigit(ammount_TB.Text, 0))
                             {
-                                bankAccount.amount = int.Parse(ammount_TB.Text);
+                                if (int.Parse(ammount_TB.Text) > 0)
+                                {
+                                    bankAccount.amount = int.Parse(ammount_TB.Text);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Valoare gresita!");
+                                }
                             }
                             else
                             {
                                 MessageBox.Show("Valoare gresita!");
                             }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Valoare gresita!");
-                        }
 
-                        if(char.IsDigit(clientID_TB.Text, 0))
-                        {
-                            bankAccount.client_id = int.Parse(clientID_TB.Text);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Client ID gresit");
-                        }
-                        try
-                        {
-                            db.BankAccount.Add(bankAccount);
-                            db.SaveChanges();
-                            MessageBox.Show("Adaugare reusita!");
-                            iban_TB.Clear();
-                            ammount_TB.Clear();
-                            clientID_TB.Clear();
-                            this.bankAccountTableAdapter.Fill(this.bank_dbDataSet3.BankAccount);
+                            if (char.IsDigit(clientID_TB.Text, 0))
+                            {
+                                bankAccount.client_id = int.Parse(clientID_TB.Text);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Client ID gresit");
+                            }
+                            try
+                            {
+                                db.BankAccount.Add(bankAccount);
+                                db.SaveChanges();
+                                MessageBox.Show("Adaugare reusita!");
+                                iban_TB.Clear();
+                                ammount_TB.Clear();
+                                clientID_TB.Clear();
+                                this.bankAccountTableAdapter.Fill(this.bank_dbDataSet3.BankAccount);
+
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Adaugarea a esuat-------!");
+                            }
 
                         }
                         catch
                         {
-                            MessageBox.Show("Adaugarea a esuat-------!");
+                            MessageBox.Show("Adaugarea a esuat!");
                         }
 
                     }
                     catch
                     {
-                        MessageBox.Show("Adaugarea a esuat!");
+
                     }
-
-                }
-                catch
-                {
-
                 }
             }
         }
 
         private void deleteBA_BTN_Click(object sender, EventArgs e)
         {
-            int bankaccount_id = int.Parse(dataGrid_BA.CurrentRow.Cells[0].Value.ToString());
-            using (var db = new Bank_dbEntities())
+            ConfirmForm confirmForm = new ConfirmForm("Doriti sa stergeti acest bank account?");
+            confirmForm.ShowDialog();
+            if (ConfirmForm.option == 1)
             {
+                int bankaccount_id = int.Parse(dataGrid_BA.CurrentRow.Cells[0].Value.ToString());
+                using (var db = new Bank_dbEntities())
+                {
 
-                try
-                {
-                    var bankAccount = (from c in db.BankAccount
-                                        where c.account_id == bankaccount_id
-                                        select c).First();
-                    db.BankAccount.Remove(bankAccount);
-                    db.SaveChanges();
-                    dataGrid_BA.Rows.RemoveAt(this.dataGrid_BA.CurrentCell.RowIndex);
-                    MessageBox.Show("Stergere reusita!");
-                }
-                catch
-                {
-                    MessageBox.Show("Stergerea a esuat!");
+                    try
+                    {
+                        var bankAccount = (from c in db.BankAccount
+                                           where c.account_id == bankaccount_id
+                                           select c).First();
+                        db.BankAccount.Remove(bankAccount);
+                        db.SaveChanges();
+                        dataGrid_BA.Rows.RemoveAt(this.dataGrid_BA.CurrentCell.RowIndex);
+                        MessageBox.Show("Stergere reusita!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Stergerea a esuat!");
+                    }
                 }
             }
         }
@@ -119,25 +135,32 @@ namespace Bankify
         private void editBA_BTN_Click(object sender, EventArgs e)
         {
             int bankAccount_id = int.Parse(dataGrid_BA.CurrentRow.Cells[0].Value.ToString());
-            using (var db = new Bank_dbEntities())
+            if (isFieldEmpty())
             {
-                var bankAccount = (from c in db.BankAccount
-                                     where c.account_id == bankAccount_id
-                                     select c).First();
-                try
+                MessageBox.Show("Toate spatiile trebuiesc completate!");
+            }
+            else
+            {
+                using (var db = new Bank_dbEntities())
                 {
-                    this.bankAccountTableAdapter.Update(iban_TB.Text, currency_CB.Text, int.Parse(ammount_TB.Text), int.Parse(clientID_TB.Text),
-                        bankAccount.account_id, bankAccount.iban, bankAccount.currency, bankAccount.amount, bankAccount.client_id);
-                    db.SaveChanges();
-                    MessageBox.Show("Modificare reusita!");
-                    this.bankAccountTableAdapter.Fill(this.bank_dbDataSet3.BankAccount);
-                }
-                catch
-                {
-                    MessageBox.Show("Modificare esuata!");
-                }
-                
+                    var bankAccount = (from c in db.BankAccount
+                                       where c.account_id == bankAccount_id
+                                       select c).First();
+                    try
+                    {
+                        this.bankAccountTableAdapter.Update(iban_TB.Text, currency_CB.Text, int.Parse(ammount_TB.Text), int.Parse(clientID_TB.Text),
+                            bankAccount.account_id, bankAccount.iban, bankAccount.currency, bankAccount.amount, bankAccount.client_id);
+                        db.SaveChanges();
+                        MessageBox.Show("Modificare reusita!");
+                        this.bankAccountTableAdapter.Fill(this.bank_dbDataSet3.BankAccount);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Modificare esuata!");
+                    }
 
+
+                }
             }
         }
 
@@ -160,25 +183,16 @@ namespace Bankify
 
         private void button_searchByName_Click(object sender, EventArgs e)
         {
-            numberPressed++;
-            if (numberPressed == 1)
+            if (numberPressed == 0)
             {
-                label_firstName.Visible = true;
-                label_name.Visible = true;
-                textBox_firstName.Visible = true;
-                textBox_lastName.Visible = true;
+                CNP_LBL.Visible = true;
+                SCNP_TB.Visible = true;
+                showAll_BTN.Visible = true;
+                numberPressed++;
             }
             else
             {
-                numberPressed = 0;
-                label_firstName.Visible = false;
-                label_name.Visible = false;
-                textBox_firstName.Text = "";
-                textBox_lastName.Text = "";
-                textBox_firstName.Visible = false;
-                textBox_lastName.Visible = false;
-                string lastName = textBox_lastName.Text;
-                string firstName = textBox_firstName.Text;
+                string CNP = SCNP_TB.Text;
                 DataSet ds = new DataSet();
                 using (var db=new Bank_dbEntities())
                 {
@@ -186,18 +200,48 @@ namespace Bankify
                     {
                         con.Open();
                         SqlCommand command = new SqlCommand("SELECT * FROM BankAccount " +
-                                                             "WHERE client_id = (SELECT client_id FROM ClientAccount " +
-                                                                               "WHERE last_name=@lastName AND first_name=@firstName)", con);
+                                                             "WHERE client_id IN (SELECT client_id FROM ClientAccount " +
+                                                                               "WHERE CNP = @CNP)", con);
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        adapter.SelectCommand.Parameters.AddWithValue("@lastName", lastName);
-                        adapter.SelectCommand.Parameters.AddWithValue("@firstName", firstName);
+                        adapter.SelectCommand.Parameters.AddWithValue("@CNP", CNP);
                         adapter.Fill(ds);
                         con.Close();
                     }
 
                 }
                 dataGrid_BA.DataSource = ds.Tables[0];
+                SCNP_TB.Clear();
+                numberPressed = 0;
             }
+        }
+
+        private void showAll_BTN_Click(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+            using (var db = new Bank_dbEntities())
+            {
+                using (SqlConnection con = new SqlConnection(db.Database.Connection.ConnectionString))
+                {
+                    con.Open();
+                    SqlCommand command = new SqlCommand("SELECT * FROM BankAccount "
+                                                        , con);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    adapter.Fill(ds);
+                    con.Close();
+                }
+
+            }
+            dataGrid_BA.DataSource = ds.Tables[0];
+        }
+
+        public Boolean isFieldEmpty()
+        {
+            if(String.IsNullOrWhiteSpace(iban_TB.Text) || String.IsNullOrWhiteSpace(currency_CB.Text) || String.IsNullOrWhiteSpace(ammount_TB.Text)
+                || String.IsNullOrWhiteSpace(clientID_TB.Text))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

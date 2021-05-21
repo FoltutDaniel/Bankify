@@ -33,6 +33,7 @@ namespace Bankify
             this.LA_BTN = new System.Windows.Forms.Button();
             this.CD_BTN = new System.Windows.Forms.Button();
             this.BA_BTN = new System.Windows.Forms.Button();
+            this.button_add_funds = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -75,17 +76,29 @@ namespace Bankify
             this.BA_BTN.UseVisualStyleBackColor = true;
             this.BA_BTN.Click += new System.EventHandler(this.BA_BTN_Click);
             // 
+            // button_add_funds
+            // 
+            this.button_add_funds.Location = new System.Drawing.Point(291, 347);
+            this.button_add_funds.Name = "button_add_funds";
+            this.button_add_funds.Size = new System.Drawing.Size(201, 59);
+            this.button_add_funds.TabIndex = 4;
+            this.button_add_funds.Text = "Add Funds to Bank Account";
+            this.button_add_funds.UseVisualStyleBackColor = true;
+            this.button_add_funds.Click += new System.EventHandler(this.button_add_funds_Click);
+            // 
             // Form_Admin_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 483);
+            this.Controls.Add(this.button_add_funds);
             this.Controls.Add(this.BA_BTN);
             this.Controls.Add(this.CD_BTN);
             this.Controls.Add(this.LA_BTN);
             this.Controls.Add(this.label1);
             this.Name = "Form_Admin_Menu";
-            this.Text = "Form_Admin_Menu";
+            this.Text = "Admin Menu";
+            this.Load += new System.EventHandler(this.Form_Admin_Menu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +110,6 @@ namespace Bankify
         private System.Windows.Forms.Button LA_BTN;
         private System.Windows.Forms.Button CD_BTN;
         private System.Windows.Forms.Button BA_BTN;
+        private System.Windows.Forms.Button button_add_funds;
     }
 }
