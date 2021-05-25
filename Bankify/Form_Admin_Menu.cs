@@ -12,9 +12,12 @@ namespace Bankify
 {
     public partial class Form_Admin_Menu : Form
     {
-        public Form_Admin_Menu()
+        Form_login parentForm;
+        public Form_Admin_Menu(Form_login form)
         {
             InitializeComponent();
+            parentForm = form;
+            parentForm.Hide();
             CenterToScreen();
         }
 
@@ -45,6 +48,17 @@ namespace Bankify
         {
             Form_Admin_Add_Funds form_Admin_Add_Funds = new Form_Admin_Add_Funds();
             form_Admin_Add_Funds.Show();
+        }
+
+        private void button_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button_LoginClient_Click(object sender, EventArgs e)
+        {
+            parentForm.Show();
+            Close();
         }
     }
 }

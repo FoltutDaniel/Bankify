@@ -71,16 +71,17 @@
             this.groupBox_search_by_name.Controls.Add(this.textBox_first_name);
             this.groupBox_search_by_name.Controls.Add(this.label2);
             this.groupBox_search_by_name.Controls.Add(this.label1);
-            this.groupBox_search_by_name.Location = new System.Drawing.Point(13, 13);
+            this.groupBox_search_by_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_search_by_name.Location = new System.Drawing.Point(12, 12);
             this.groupBox_search_by_name.Name = "groupBox_search_by_name";
-            this.groupBox_search_by_name.Size = new System.Drawing.Size(200, 109);
+            this.groupBox_search_by_name.Size = new System.Drawing.Size(241, 129);
             this.groupBox_search_by_name.TabIndex = 0;
             this.groupBox_search_by_name.TabStop = false;
             this.groupBox_search_by_name.Text = "Search By Name";
             // 
             // button_search_by_name
             // 
-            this.button_search_by_name.Location = new System.Drawing.Point(56, 69);
+            this.button_search_by_name.Location = new System.Drawing.Point(75, 83);
             this.button_search_by_name.Name = "button_search_by_name";
             this.button_search_by_name.Size = new System.Drawing.Size(83, 34);
             this.button_search_by_name.TabIndex = 4;
@@ -90,44 +91,45 @@
             // 
             // textBox_second_name
             // 
-            this.textBox_second_name.Location = new System.Drawing.Point(94, 43);
+            this.textBox_second_name.Location = new System.Drawing.Point(135, 53);
             this.textBox_second_name.Name = "textBox_second_name";
-            this.textBox_second_name.Size = new System.Drawing.Size(100, 20);
+            this.textBox_second_name.Size = new System.Drawing.Size(100, 24);
             this.textBox_second_name.TabIndex = 3;
             // 
             // textBox_first_name
             // 
-            this.textBox_first_name.Location = new System.Drawing.Point(94, 17);
+            this.textBox_first_name.Location = new System.Drawing.Point(135, 23);
             this.textBox_first_name.Name = "textBox_first_name";
-            this.textBox_first_name.Size = new System.Drawing.Size(100, 20);
+            this.textBox_first_name.Size = new System.Drawing.Size(100, 24);
             this.textBox_first_name.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 46);
+            this.label2.Location = new System.Drawing.Point(6, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(107, 18);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Second Name";
+            this.label2.Text = "Second Name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 20);
+            this.label1.Location = new System.Drawing.Point(6, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(85, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "First Name";
+            this.label1.Text = "First Name:";
             // 
             // groupBox_search_by_cnp
             // 
             this.groupBox_search_by_cnp.Controls.Add(this.button_search_by_cnp);
             this.groupBox_search_by_cnp.Controls.Add(this.textBox_cnp);
             this.groupBox_search_by_cnp.Controls.Add(this.label3);
-            this.groupBox_search_by_cnp.Location = new System.Drawing.Point(12, 138);
+            this.groupBox_search_by_cnp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_search_by_cnp.Location = new System.Drawing.Point(12, 147);
             this.groupBox_search_by_cnp.Name = "groupBox_search_by_cnp";
-            this.groupBox_search_by_cnp.Size = new System.Drawing.Size(200, 86);
+            this.groupBox_search_by_cnp.Size = new System.Drawing.Size(241, 97);
             this.groupBox_search_by_cnp.TabIndex = 1;
             this.groupBox_search_by_cnp.TabStop = false;
             this.groupBox_search_by_cnp.Text = "Search By CNP";
@@ -135,7 +137,7 @@
             // 
             // button_search_by_cnp
             // 
-            this.button_search_by_cnp.Location = new System.Drawing.Point(57, 46);
+            this.button_search_by_cnp.Location = new System.Drawing.Point(75, 57);
             this.button_search_by_cnp.Name = "button_search_by_cnp";
             this.button_search_by_cnp.Size = new System.Drawing.Size(83, 34);
             this.button_search_by_cnp.TabIndex = 5;
@@ -145,19 +147,19 @@
             // 
             // textBox_cnp
             // 
-            this.textBox_cnp.Location = new System.Drawing.Point(94, 17);
+            this.textBox_cnp.Location = new System.Drawing.Point(135, 27);
             this.textBox_cnp.Name = "textBox_cnp";
-            this.textBox_cnp.Size = new System.Drawing.Size(100, 20);
+            this.textBox_cnp.Size = new System.Drawing.Size(100, 24);
             this.textBox_cnp.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 20);
+            this.label3.Location = new System.Drawing.Point(6, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.Size = new System.Drawing.Size(44, 18);
             this.label3.TabIndex = 0;
-            this.label3.Text = "CNP";
+            this.label3.Text = "CNP:";
             // 
             // dataGridView_Add_Funds
             // 
@@ -170,9 +172,9 @@
             this.amountDataGridViewTextBoxColumn,
             this.clientidDataGridViewTextBoxColumn});
             this.dataGridView_Add_Funds.DataSource = this.bankAccountBindingSource;
-            this.dataGridView_Add_Funds.Location = new System.Drawing.Point(219, 13);
+            this.dataGridView_Add_Funds.Location = new System.Drawing.Point(259, 12);
             this.dataGridView_Add_Funds.Name = "dataGridView_Add_Funds";
-            this.dataGridView_Add_Funds.Size = new System.Drawing.Size(545, 212);
+            this.dataGridView_Add_Funds.Size = new System.Drawing.Size(545, 226);
             this.dataGridView_Add_Funds.TabIndex = 2;
             this.dataGridView_Add_Funds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Add_Funds_CellClick);
             this.dataGridView_Add_Funds.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Add_Funds_CellContentClick);
@@ -230,32 +232,36 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(11, 276);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.Size = new System.Drawing.Size(65, 18);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Balance";
+            this.label4.Text = "Balance:";
             // 
             // textBox_old_balance
             // 
-            this.textBox_old_balance.Location = new System.Drawing.Point(123, 273);
+            this.textBox_old_balance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_old_balance.Location = new System.Drawing.Point(147, 273);
             this.textBox_old_balance.Name = "textBox_old_balance";
             this.textBox_old_balance.ReadOnly = true;
-            this.textBox_old_balance.Size = new System.Drawing.Size(100, 20);
+            this.textBox_old_balance.Size = new System.Drawing.Size(100, 24);
             this.textBox_old_balance.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(10, 315);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
+            this.label5.Size = new System.Drawing.Size(114, 18);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Amount To Add";
+            this.label5.Text = "Amount To Add:";
             // 
             // button_add_funds
             // 
-            this.button_add_funds.Location = new System.Drawing.Point(297, 284);
+            this.button_add_funds.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_add_funds.Location = new System.Drawing.Point(259, 287);
             this.button_add_funds.Name = "button_add_funds";
             this.button_add_funds.Size = new System.Drawing.Size(147, 75);
             this.button_add_funds.TabIndex = 6;
@@ -265,34 +271,37 @@
             // 
             // textBox_amount_to_add
             // 
-            this.textBox_amount_to_add.Location = new System.Drawing.Point(123, 312);
+            this.textBox_amount_to_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_amount_to_add.Location = new System.Drawing.Point(147, 312);
             this.textBox_amount_to_add.Name = "textBox_amount_to_add";
-            this.textBox_amount_to_add.Size = new System.Drawing.Size(100, 20);
+            this.textBox_amount_to_add.Size = new System.Drawing.Size(100, 24);
             this.textBox_amount_to_add.TabIndex = 7;
             this.textBox_amount_to_add.TextChanged += new System.EventHandler(this.textBox_amount_to_add_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(11, 357);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 13);
+            this.label6.Size = new System.Drawing.Size(99, 18);
             this.label6.TabIndex = 8;
-            this.label6.Text = "New Balance";
+            this.label6.Text = "New Balance:";
             // 
             // textBox_new_balance
             // 
-            this.textBox_new_balance.Location = new System.Drawing.Point(123, 354);
+            this.textBox_new_balance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_new_balance.Location = new System.Drawing.Point(147, 354);
             this.textBox_new_balance.Name = "textBox_new_balance";
             this.textBox_new_balance.ReadOnly = true;
-            this.textBox_new_balance.Size = new System.Drawing.Size(100, 20);
+            this.textBox_new_balance.Size = new System.Drawing.Size(100, 24);
             this.textBox_new_balance.TabIndex = 9;
             // 
             // Form_Admin_Add_Funds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 450);
+            this.ClientSize = new System.Drawing.Size(816, 450);
             this.Controls.Add(this.textBox_new_balance);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox_amount_to_add);

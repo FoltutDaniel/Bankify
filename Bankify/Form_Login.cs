@@ -43,14 +43,14 @@ namespace Bankify
 
                     if (account_type == "client")
                     {
-                        Form_Client form_Client = new Form_Client(login_id);
+                        Form_Client form_Client = new Form_Client(login_id,this);
                         form_Client.Show();
                     }
                     else
                     {
                         if (account_type == "admin")
                         {
-                            Form_Admin_Menu form_admin_menu = new Form_Admin_Menu();
+                            Form_Admin_Menu form_admin_menu = new Form_Admin_Menu(this);
                             form_admin_menu.Show();
                         }
                     }
@@ -86,6 +86,12 @@ namespace Bankify
         private void Form_login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_forgot_pass_Click(object sender, EventArgs e)
+        {
+            Form_Forgot_Password form_Forgot_Password = new Form_Forgot_Password();
+            form_Forgot_Password.Show();
         }
     }
 }

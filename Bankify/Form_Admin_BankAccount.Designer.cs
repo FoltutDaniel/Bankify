@@ -70,9 +70,9 @@ namespace Bankify
             this.amountDataGridViewTextBoxColumn,
             this.clientidDataGridViewTextBoxColumn});
             this.dataGrid_BA.DataSource = this.bankAccountBindingSource;
-            this.dataGrid_BA.Location = new System.Drawing.Point(223, 41);
+            this.dataGrid_BA.Location = new System.Drawing.Point(311, 41);
             this.dataGrid_BA.Name = "dataGrid_BA";
-            this.dataGrid_BA.Size = new System.Drawing.Size(547, 221);
+            this.dataGrid_BA.Size = new System.Drawing.Size(547, 301);
             this.dataGrid_BA.TabIndex = 0;
             this.dataGrid_BA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_BA_CellClick);
             // 
@@ -124,65 +124,73 @@ namespace Bankify
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(45, 18);
             this.label1.TabIndex = 1;
-            this.label1.Text = "IBAN";
+            this.label1.Text = "IBAN:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 81);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(72, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Currency";
+            this.label2.Text = "Currency:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 111);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(63, 18);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Amount";
+            this.label3.Text = "Amount:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 142);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 145);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.Size = new System.Drawing.Size(67, 18);
             this.label4.TabIndex = 4;
-            this.label4.Text = "ClientId";
+            this.label4.Text = "Client ID:";
             // 
             // iban_TB
             // 
-            this.iban_TB.Location = new System.Drawing.Point(71, 41);
+            this.iban_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iban_TB.Location = new System.Drawing.Point(117, 41);
             this.iban_TB.Name = "iban_TB";
-            this.iban_TB.Size = new System.Drawing.Size(100, 20);
+            this.iban_TB.Size = new System.Drawing.Size(100, 24);
             this.iban_TB.TabIndex = 5;
             // 
             // ammount_TB
             // 
-            this.ammount_TB.Location = new System.Drawing.Point(71, 108);
+            this.ammount_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ammount_TB.Location = new System.Drawing.Point(117, 109);
             this.ammount_TB.Name = "ammount_TB";
-            this.ammount_TB.Size = new System.Drawing.Size(100, 20);
+            this.ammount_TB.Size = new System.Drawing.Size(100, 24);
             this.ammount_TB.TabIndex = 7;
             // 
             // clientID_TB
             // 
-            this.clientID_TB.Location = new System.Drawing.Point(71, 139);
+            this.clientID_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientID_TB.Location = new System.Drawing.Point(117, 142);
             this.clientID_TB.Name = "clientID_TB";
-            this.clientID_TB.Size = new System.Drawing.Size(100, 20);
+            this.clientID_TB.Size = new System.Drawing.Size(100, 24);
             this.clientID_TB.TabIndex = 8;
             // 
             // addBA_BTN
             // 
-            this.addBA_BTN.Location = new System.Drawing.Point(12, 311);
+            this.addBA_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBA_BTN.Location = new System.Drawing.Point(15, 180);
             this.addBA_BTN.Name = "addBA_BTN";
-            this.addBA_BTN.Size = new System.Drawing.Size(95, 45);
+            this.addBA_BTN.Size = new System.Drawing.Size(120, 50);
             this.addBA_BTN.TabIndex = 9;
             this.addBA_BTN.Text = "Add Bank Account";
             this.addBA_BTN.UseVisualStyleBackColor = true;
@@ -190,9 +198,10 @@ namespace Bankify
             // 
             // editBA_BTN
             // 
-            this.editBA_BTN.Location = new System.Drawing.Point(152, 311);
+            this.editBA_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBA_BTN.Location = new System.Drawing.Point(15, 236);
             this.editBA_BTN.Name = "editBA_BTN";
-            this.editBA_BTN.Size = new System.Drawing.Size(89, 45);
+            this.editBA_BTN.Size = new System.Drawing.Size(120, 50);
             this.editBA_BTN.TabIndex = 10;
             this.editBA_BTN.Text = "Edit Bank Account";
             this.editBA_BTN.UseVisualStyleBackColor = true;
@@ -200,9 +209,10 @@ namespace Bankify
             // 
             // deleteBA_BTN
             // 
-            this.deleteBA_BTN.Location = new System.Drawing.Point(288, 311);
+            this.deleteBA_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBA_BTN.Location = new System.Drawing.Point(15, 292);
             this.deleteBA_BTN.Name = "deleteBA_BTN";
-            this.deleteBA_BTN.Size = new System.Drawing.Size(90, 45);
+            this.deleteBA_BTN.Size = new System.Drawing.Size(120, 50);
             this.deleteBA_BTN.TabIndex = 11;
             this.deleteBA_BTN.Text = "Delete Bank Account";
             this.deleteBA_BTN.UseVisualStyleBackColor = true;
@@ -210,6 +220,7 @@ namespace Bankify
             // 
             // currency_CB
             // 
+            this.currency_CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currency_CB.FormattingEnabled = true;
             this.currency_CB.Items.AddRange(new object[] {
             "USD",
@@ -223,16 +234,17 @@ namespace Bankify
             "RON",
             "SEK",
             "HUF"});
-            this.currency_CB.Location = new System.Drawing.Point(71, 72);
+            this.currency_CB.Location = new System.Drawing.Point(117, 75);
             this.currency_CB.Name = "currency_CB";
-            this.currency_CB.Size = new System.Drawing.Size(121, 21);
+            this.currency_CB.Size = new System.Drawing.Size(121, 26);
             this.currency_CB.TabIndex = 12;
             // 
             // button_searchByCNP
             // 
-            this.button_searchByCNP.Location = new System.Drawing.Point(414, 311);
+            this.button_searchByCNP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_searchByCNP.Location = new System.Drawing.Point(141, 180);
             this.button_searchByCNP.Name = "button_searchByCNP";
-            this.button_searchByCNP.Size = new System.Drawing.Size(90, 45);
+            this.button_searchByCNP.Size = new System.Drawing.Size(120, 50);
             this.button_searchByCNP.TabIndex = 13;
             this.button_searchByCNP.Text = "Search By CNP";
             this.button_searchByCNP.UseVisualStyleBackColor = true;
@@ -241,24 +253,27 @@ namespace Bankify
             // CNP_LBL
             // 
             this.CNP_LBL.AutoSize = true;
-            this.CNP_LBL.Location = new System.Drawing.Point(535, 327);
+            this.CNP_LBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CNP_LBL.Location = new System.Drawing.Point(141, 249);
             this.CNP_LBL.Name = "CNP_LBL";
-            this.CNP_LBL.Size = new System.Drawing.Size(29, 13);
+            this.CNP_LBL.Size = new System.Drawing.Size(44, 18);
             this.CNP_LBL.TabIndex = 14;
-            this.CNP_LBL.Text = "CNP";
+            this.CNP_LBL.Text = "CNP:";
             // 
             // SCNP_TB
             // 
-            this.SCNP_TB.Location = new System.Drawing.Point(588, 324);
+            this.SCNP_TB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SCNP_TB.Location = new System.Drawing.Point(191, 246);
             this.SCNP_TB.Name = "SCNP_TB";
-            this.SCNP_TB.Size = new System.Drawing.Size(100, 20);
+            this.SCNP_TB.Size = new System.Drawing.Size(100, 24);
             this.SCNP_TB.TabIndex = 15;
             // 
             // showAll_BTN
             // 
-            this.showAll_BTN.Location = new System.Drawing.Point(414, 376);
+            this.showAll_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showAll_BTN.Location = new System.Drawing.Point(141, 292);
             this.showAll_BTN.Name = "showAll_BTN";
-            this.showAll_BTN.Size = new System.Drawing.Size(90, 47);
+            this.showAll_BTN.Size = new System.Drawing.Size(120, 50);
             this.showAll_BTN.TabIndex = 16;
             this.showAll_BTN.Text = "Show All Entries";
             this.showAll_BTN.UseVisualStyleBackColor = true;
@@ -268,7 +283,7 @@ namespace Bankify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(870, 362);
             this.Controls.Add(this.showAll_BTN);
             this.Controls.Add(this.SCNP_TB);
             this.Controls.Add(this.CNP_LBL);

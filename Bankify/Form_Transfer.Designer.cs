@@ -43,84 +43,94 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 80);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(85, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "From Iban:";
+            this.label1.Text = "From IBAN:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 116);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(67, 18);
             this.label2.TabIndex = 1;
-            this.label2.Text = "To Iban:";
+            this.label2.Text = "To IBAN:";
             // 
             // textBox_FromIban
             // 
-            this.textBox_FromIban.Location = new System.Drawing.Point(108, 77);
+            this.textBox_FromIban.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_FromIban.Location = new System.Drawing.Point(108, 12);
             this.textBox_FromIban.Name = "textBox_FromIban";
-            this.textBox_FromIban.Size = new System.Drawing.Size(178, 20);
+            this.textBox_FromIban.Size = new System.Drawing.Size(178, 24);
             this.textBox_FromIban.TabIndex = 2;
             // 
             // textBox_ToIban
             // 
-            this.textBox_ToIban.Location = new System.Drawing.Point(108, 113);
+            this.textBox_ToIban.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_ToIban.Location = new System.Drawing.Point(108, 42);
             this.textBox_ToIban.Name = "textBox_ToIban";
-            this.textBox_ToIban.Size = new System.Drawing.Size(178, 20);
+            this.textBox_ToIban.Size = new System.Drawing.Size(178, 24);
             this.textBox_ToIban.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 148);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 75);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.Size = new System.Drawing.Size(63, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "Amount:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 183);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(72, 18);
             this.label5.TabIndex = 7;
             this.label5.Text = "Currency:";
             // 
             // textBox_Amount
             // 
-            this.textBox_Amount.Location = new System.Drawing.Point(108, 145);
+            this.textBox_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Amount.Location = new System.Drawing.Point(108, 72);
             this.textBox_Amount.Name = "textBox_Amount";
-            this.textBox_Amount.Size = new System.Drawing.Size(178, 20);
+            this.textBox_Amount.Size = new System.Drawing.Size(178, 24);
             this.textBox_Amount.TabIndex = 8;
             // 
             // textBox_Currency
             // 
-            this.textBox_Currency.Location = new System.Drawing.Point(108, 180);
+            this.textBox_Currency.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Currency.Location = new System.Drawing.Point(108, 102);
             this.textBox_Currency.Name = "textBox_Currency";
-            this.textBox_Currency.Size = new System.Drawing.Size(178, 20);
+            this.textBox_Currency.Size = new System.Drawing.Size(178, 24);
             this.textBox_Currency.TabIndex = 9;
             // 
             // button_FinishTransf
             // 
-            this.button_FinishTransf.Location = new System.Drawing.Point(29, 222);
+            this.button_FinishTransf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_FinishTransf.Location = new System.Drawing.Point(15, 154);
             this.button_FinishTransf.Name = "button_FinishTransf";
-            this.button_FinishTransf.Size = new System.Drawing.Size(90, 62);
+            this.button_FinishTransf.Size = new System.Drawing.Size(130, 70);
             this.button_FinishTransf.TabIndex = 10;
-            this.button_FinishTransf.Text = "Finalizeaza transferul intr-un cont propriu";
+            this.button_FinishTransf.Text = "Complete the transfer in your own account";
             this.button_FinishTransf.UseVisualStyleBackColor = true;
             this.button_FinishTransf.Click += new System.EventHandler(this.button_FinishTransf_Click);
             // 
             // button_finishTransferOut
             // 
-            this.button_finishTransferOut.Location = new System.Drawing.Point(196, 222);
+            this.button_finishTransferOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_finishTransferOut.Location = new System.Drawing.Point(156, 154);
             this.button_finishTransferOut.Name = "button_finishTransferOut";
-            this.button_finishTransferOut.Size = new System.Drawing.Size(90, 62);
+            this.button_finishTransferOut.Size = new System.Drawing.Size(130, 70);
             this.button_finishTransferOut.TabIndex = 11;
-            this.button_finishTransferOut.Text = "Finalizeaza transferul intr-un cont exterior";
+            this.button_finishTransferOut.Text = "Complete the transfer to an external account";
             this.button_finishTransferOut.UseVisualStyleBackColor = true;
             this.button_finishTransferOut.Click += new System.EventHandler(this.button_finishTransferOut_Click);
             // 
@@ -128,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 409);
+            this.ClientSize = new System.Drawing.Size(305, 246);
             this.Controls.Add(this.button_finishTransferOut);
             this.Controls.Add(this.button_FinishTransf);
             this.Controls.Add(this.textBox_Currency);

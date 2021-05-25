@@ -14,17 +14,25 @@ namespace Bankify
     public partial class Form_Client : Form
     {
         private int login_id;
-        public Form_Client(int login_id)
+        Form_login parentForm;
+
+        public Form_Client(int login_id, Form_login form)
         {
             InitializeComponent();
             CenterToScreen();
             this.login_id = login_id;
+            parentForm = form;
+            parentForm.Hide();
             prepopulate();
         }
 
         private void Form_Client_Load(object sender, EventArgs e)
         {
             dataGridView_Client.DataSource = GetData().Tables[0];
+            dataGridView_Client.Columns[0].HeaderText = "IBAN";
+            dataGridView_Client.Columns[1].HeaderText = "Currency";
+            dataGridView_Client.Columns[2].HeaderText = "Amount";
+
         }
 
         public void prepopulate()
@@ -106,6 +114,17 @@ namespace Bankify
             string iban = dataGridView_Client.SelectedRows[0].Cells[0].Value.ToString();
             Form_ExtrasCont form_ExtrasCont = new Form_ExtrasCont(iban);
             form_ExtrasCont.Show();
+        }
+
+        private void button_ChangePass_Click(object sender, EventArgs e)
+        {
+            Form_ChangePass form_ChangePass = new Form_ChangePass(login_id);
+            form_ChangePass.Show();
+        }
+
+        private void button_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -25,6 +25,12 @@ namespace Bankify
         {
             // TODO: This line of code loads data into the 'bank_dbDataSet3.BankAccount' table. You can move, or remove it, as needed.
             this.bankAccountTableAdapter.Fill(this.bank_dbDataSet3.BankAccount);
+            dataGridView_Add_Funds.Columns[0].HeaderText = "Account ID";
+            dataGridView_Add_Funds.Columns[1].HeaderText = "IBAN";
+            dataGridView_Add_Funds.Columns[2].HeaderText = "Currency";
+            dataGridView_Add_Funds.Columns[3].HeaderText = "Amount";
+            dataGridView_Add_Funds.Columns[4].HeaderText = "Client ID";
+
         }
 
 

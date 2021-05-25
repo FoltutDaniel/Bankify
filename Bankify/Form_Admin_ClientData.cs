@@ -28,6 +28,16 @@ namespace Bankify
             // TODO: This line of code loads data into the 'bank_dbDataSet4.ClientAccount' table. You can move, or remove it, as needed.
             this.clientAccountTableAdapter1.Fill(this.bank_dbDataSet4.ClientAccount);
             this.clientAccountTableAdapter.Fill(this.bank_dbDataSet.ClientAccount);
+            dataGridView_accounts.Columns[0].HeaderText = "Client ID";
+            dataGridView_accounts.Columns[1].HeaderText = "First Name";
+            dataGridView_accounts.Columns[2].HeaderText = "Last Name";
+            dataGridView_accounts.Columns[3].HeaderText = "Age";
+            dataGridView_accounts.Columns[4].HeaderText = "Country";
+            dataGridView_accounts.Columns[5].HeaderText = "Phone Number";
+            dataGridView_accounts.Columns[6].HeaderText = "Email";
+            dataGridView_accounts.Columns[7].HeaderText = "Birthday";
+            dataGridView_accounts.Columns[8].HeaderText = "Login ID";
+            dataGridView_accounts.Columns[9].HeaderText = "CNP";
             SCNP_TB.Visible = false;
             CNP_LBL.Visible = false;
             showAll_BTN.Visible = false;

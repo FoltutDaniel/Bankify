@@ -39,27 +39,29 @@
             // dataGridView_ExtrasCont
             // 
             this.dataGridView_ExtrasCont.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ExtrasCont.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView_ExtrasCont.Location = new System.Drawing.Point(138, 12);
             this.dataGridView_ExtrasCont.Name = "dataGridView_ExtrasCont";
             this.dataGridView_ExtrasCont.ReadOnly = true;
-            this.dataGridView_ExtrasCont.Size = new System.Drawing.Size(564, 308);
+            this.dataGridView_ExtrasCont.Size = new System.Drawing.Size(543, 258);
             this.dataGridView_ExtrasCont.TabIndex = 0;
             // 
             // button_fromIban
             // 
-            this.button_fromIban.Location = new System.Drawing.Point(12, 326);
+            this.button_fromIban.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_fromIban.Location = new System.Drawing.Point(12, 12);
             this.button_fromIban.Name = "button_fromIban";
-            this.button_fromIban.Size = new System.Drawing.Size(78, 47);
+            this.button_fromIban.Size = new System.Drawing.Size(120, 60);
             this.button_fromIban.TabIndex = 1;
-            this.button_fromIban.Text = "Transactions from this iban";
+            this.button_fromIban.Text = "Transactions from this IBAN";
             this.button_fromIban.UseVisualStyleBackColor = true;
             this.button_fromIban.Click += new System.EventHandler(this.button_fromIban_Click);
             // 
             // button_viewAll
             // 
-            this.button_viewAll.Location = new System.Drawing.Point(180, 326);
+            this.button_viewAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_viewAll.Location = new System.Drawing.Point(12, 144);
             this.button_viewAll.Name = "button_viewAll";
-            this.button_viewAll.Size = new System.Drawing.Size(78, 47);
+            this.button_viewAll.Size = new System.Drawing.Size(120, 60);
             this.button_viewAll.TabIndex = 3;
             this.button_viewAll.Text = "All transactions";
             this.button_viewAll.UseVisualStyleBackColor = true;
@@ -67,19 +69,21 @@
             // 
             // button_toIban
             // 
-            this.button_toIban.Location = new System.Drawing.Point(96, 326);
+            this.button_toIban.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_toIban.Location = new System.Drawing.Point(12, 78);
             this.button_toIban.Name = "button_toIban";
-            this.button_toIban.Size = new System.Drawing.Size(78, 47);
+            this.button_toIban.Size = new System.Drawing.Size(120, 60);
             this.button_toIban.TabIndex = 2;
-            this.button_toIban.Text = "Transactions to this iban";
+            this.button_toIban.Text = "Transactions to this IBAN";
             this.button_toIban.UseVisualStyleBackColor = true;
             this.button_toIban.Click += new System.EventHandler(this.button_toIban_Click);
             // 
             // button_ExportExcel
             // 
-            this.button_ExportExcel.Location = new System.Drawing.Point(264, 326);
+            this.button_ExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ExportExcel.Location = new System.Drawing.Point(12, 210);
             this.button_ExportExcel.Name = "button_ExportExcel";
-            this.button_ExportExcel.Size = new System.Drawing.Size(78, 47);
+            this.button_ExportExcel.Size = new System.Drawing.Size(120, 60);
             this.button_ExportExcel.TabIndex = 4;
             this.button_ExportExcel.Text = "Export To Excell";
             this.button_ExportExcel.UseVisualStyleBackColor = true;
@@ -89,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 386);
+            this.ClientSize = new System.Drawing.Size(696, 284);
             this.Controls.Add(this.button_ExportExcel);
             this.Controls.Add(this.button_viewAll);
             this.Controls.Add(this.button_toIban);

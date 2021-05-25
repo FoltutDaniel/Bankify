@@ -26,9 +26,13 @@ namespace Bankify
 
         private void Form_ExtrasCont_Load(object sender, EventArgs e)
         {
-            contentTable = GetData().Tables[0];
+            contentTable = GetData().Tables[0];          
             dataGridView_ExtrasCont.DataSource = contentTable;
-           
+            dataGridView_ExtrasCont.Columns[0].HeaderText = "From IBAN";
+            dataGridView_ExtrasCont.Columns[1].HeaderText = "To IBAN";
+            dataGridView_ExtrasCont.Columns[2].HeaderText = "Amount";
+            dataGridView_ExtrasCont.Columns[3].HeaderText = "Currency";
+            dataGridView_ExtrasCont.Columns[4].HeaderText = "Transaction Date";
         }
 
         public DataSet GetData()
@@ -87,6 +91,7 @@ namespace Bankify
                 dt.Rows.Remove(row);
             }
             contentTable = dt;
+            
             dataGridView_ExtrasCont.DataSource = contentTable;
         }
 

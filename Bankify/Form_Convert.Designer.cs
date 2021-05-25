@@ -36,17 +36,19 @@
             // label_title
             // 
             this.label_title.AutoSize = true;
-            this.label_title.Location = new System.Drawing.Point(90, 9);
+            this.label_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_title.Location = new System.Drawing.Point(12, 9);
             this.label_title.Name = "label_title";
-            this.label_title.Size = new System.Drawing.Size(407, 13);
+            this.label_title.Size = new System.Drawing.Size(566, 18);
             this.label_title.TabIndex = 0;
             this.label_title.Text = "From_Currency and To_Currency are different. DO you want to execute conversion? ";
             // 
             // button_Yes
             // 
+            this.button_Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Yes.Location = new System.Drawing.Point(199, 45);
             this.button_Yes.Name = "button_Yes";
-            this.button_Yes.Size = new System.Drawing.Size(75, 23);
+            this.button_Yes.Size = new System.Drawing.Size(80, 30);
             this.button_Yes.TabIndex = 1;
             this.button_Yes.Text = "YES";
             this.button_Yes.UseVisualStyleBackColor = true;
@@ -54,9 +56,10 @@
             // 
             // button_No
             // 
+            this.button_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_No.Location = new System.Drawing.Point(296, 45);
             this.button_No.Name = "button_No";
-            this.button_No.Size = new System.Drawing.Size(75, 23);
+            this.button_No.Size = new System.Drawing.Size(80, 30);
             this.button_No.TabIndex = 2;
             this.button_No.Text = "NO";
             this.button_No.UseVisualStyleBackColor = true;
@@ -66,7 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 146);
+            this.ClientSize = new System.Drawing.Size(585, 92);
             this.Controls.Add(this.button_No);
             this.Controls.Add(this.button_Yes);
             this.Controls.Add(this.label_title);

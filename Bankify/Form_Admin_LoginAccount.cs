@@ -22,6 +22,10 @@ namespace Bankify
         {
             // TODO: This line of code loads data into the 'bank_dbDataSet2.LoginAccount' table. You can move, or remove it, as needed.
             this.loginAccountTableAdapter.Fill(this.bank_dbDataSet2.LoginAccount);
+            dataGridView_LA.Columns[0].HeaderText = "Login ID";
+            dataGridView_LA.Columns[1].HeaderText = "Login User Name";
+            dataGridView_LA.Columns[2].HeaderText = "Login Password";
+            dataGridView_LA.Columns[3].HeaderText = "Account Type";
             accountype_CB.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
